@@ -35,6 +35,9 @@
  * 
  * 
  * V26  09/27/20 xx:xx
+ * 
+ *      *** FORKED marlin/bugfix-2.0.x to KamikazeBDM/Marlin ***
+ * 
  *      ** SYNC: true-up PID tuning and other settings to firmware
  *      Recv: echo:  M301 E0 P22.68 I1.94 D66.19
  *      Recv: echo:  M301 E1 P32.83 I2.83 D95.09
