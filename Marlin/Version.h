@@ -34,7 +34,7 @@
  * Vx  mm/dd/YY 19:00 24HR
  * 
  * 
- * V26  09/27/20 xx:xx
+ * V26  09/27/20 10:50
  * 
  *      *** FORKED marlin/bugfix-2.0.x to KamikazeBDM/Marlin ***
  * 
@@ -46,6 +46,9 @@
  *      REMOVED: #define S_CURVE_ACCELERATION
  *      #define LIN_ADVANCE_K 0.07
  *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 402, 402 }
+ *      ADDED: #define JUNCTION_DEVIATION_MM 0.05 
+ *          // Marlin Junction Deviation Calibration toolkit for Cura (https://www.thingiverse.com/thing:3463159)
+ *      REMOVED: #define CLASSIC_JERK
  * 
  * V25  09/27/20 13:39
  *      UPDATES:    pulled latest updates from bugfix-2.0.x GIT
