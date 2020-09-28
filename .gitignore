@@ -185,3 +185,54 @@ cmake-build-*
 #Python
 __pycache__
 VISUAL-STUDIO_ENDER3pro-SKR-PRO-1.1.code-workspace
+<<<<<<< Updated upstream
+=======
+Marlin/Dist/Configuration.h
+Marlin/Dist/Configuration_adv.h
+Marlin/Dist/Version.h
+Marlin/Configuration_adv.h
+Marlin/Configuration.h
+Marlin/Version.h
+Marlin/src/pins/stm32f4/pins_BTT_SKR_PRO_common.h
+Marlin/Configuration_adv.h
+Marlin/Configuration.h
+Marlin/Version.h
+Marlin/Configuration_adv.h
+Marlin/Configuration.h
+Marlin/Configuration_adv.h
+Marlin/Configuration.h
+Marlin/Version.h
+platformio.ini
+FIRMWARE BUILDS/firmware_18.bin
+FIRMWARE BUILDS/firmware_15.bin
+FIRMWARE BUILDS/firmware_17.bin
+FIRMWARE BUILDS/firmware_15.bin
+FIRMWARE BUILDS/PREVIOUS BUILDS/firmware_09.bin
+FIRMWARE BUILDS/PREVIOUS BUILDS/firmware_12.bin
+FIRMWARE BUILDS/PREVIOUS BUILDS/firmware_14.bin
+Marlin/Custom/_Statusscreen.h
+FIRMWARE BUILDS/PREVIOUS BUILDS/firmware_06.bin
+FIRMWARE BUILDS/PREVIOUS BUILDS/firmware_08.bin
+FIRMWARE BUILDS/PREVIOUS BUILDS/firmware_07.bin
+FIRMWARE BUILDS/PREVIOUS BUILDS/firmware_10.bin
+FIRMWARE BUILDS/PREVIOUS BUILDS/firmware_11.bin
+FIRMWARE BUILDS/PREVIOUS BUILDS/firmware_13.bin
+FIRMWARE BUILDS/PREVIOUS BUILDS/firmware_05_ReaddedFirmwareEmulation-HomingChanges.bin
+FIRMWARE BUILDS/PREVIOUS BUILDS/firmware_04_SENSORLESS_HOMING_fixes.bin
+FIRMWARE BUILDS/PREVIOUS BUILDS/firmware_03_INVERT_X_Y_Z-steppers.bin
+FIRMWARE BUILDS/PREVIOUS BUILDS/firmware_01_initial_build_marlin-2.0.6-bugfix.bin
+FIRMWARE BUILDS/firmware_19.bin
+FIRMWARE BUILDS/firmware_16.bin
+Marlin/_Bootscreen.h
+Marlin/Configuration.h
+Marlin/Configuration_adv.h
+Marlin/src/pins/stm32f4/pins_BTT_SKR_PRO_common.h
+Marlin/Version.h
+platformio.ini
+Marlin/src/pins/stm32f4/pins_BTT_SKR_PRO_common.h
+platformio.ini
+Marlin/Version.h
+Marlin/src/pins/stm32f4/pins_BTT_SKR_PRO_common.h
+Marlin/Configuration_adv.h
+Marlin/Configuration.h
+>>>>>>> Stashed changes
