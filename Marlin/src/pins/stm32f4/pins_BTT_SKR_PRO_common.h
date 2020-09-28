@@ -321,34 +321,12 @@
 // Onboard SD card
 // Must use soft SPI because Marlin's default hardware SPI is tied to LCD's EXP2
 //
-<<<<<<< Updated upstream
-#if SD_CONNECTION_IS(LCD)
-
-  #define SD_DETECT_PIN                     PF12
-  #define SDSS                              PB12
-
-#elif SD_CONNECTION_IS(ONBOARD)
-
-  // The SKR Pro's ONBOARD SD interface is on SPI1.
-  // Due to a pull resistor on the clock line, it needs to use SPI Data Mode 3 to
-  // function with Hardware SPI. This is not currently configurable in the HAL,
-  // so force Software SPI to work around this issue.
-  #define SOFTWARE_SPI
-=======
 #if SD_CONNECTION_IS(ONBOARD)
   #define SOFTWARE_SPI                            // Use soft SPI for onboard SD
->>>>>>> Stashed changes
   #define SDSS                              PA4
   #define SCK_PIN                           PA5
   #define MISO_PIN                          PA6
   #define MOSI_PIN                          PB5
-<<<<<<< Updated upstream
-  #define SD_DETECT_PIN                     PB11
-
-#elif SD_CONNECTION_IS(CUSTOM_CABLE)
-  #error "CUSTOM_CABLE is not a supported SDCARD_CONNECTION for this board"
-=======
->>>>>>> Stashed changes
 #endif
 
 /**
@@ -398,11 +376,8 @@
 
     #define DOGLCD_A0                       PG6
     #define DOGLCD_CS                       PG3
-<<<<<<< Updated upstream
     #define BTN_EN1                         PG10
     #define BTN_EN2                         PF11
-=======
->>>>>>> Stashed changes
 
   #else
 
