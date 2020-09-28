@@ -28,13 +28,15 @@
 /**
  * Marlin release version identifier
  */
-#define COMPILE_VERSION "26" 
+#define COMPILE_VERSION "27" 
 
 /*******************************************************************************************************
  * Vx  mm/dd/YY 19:00 24HR
  * 
+ * V27  09/xx/xx xx:xx
+ *      
  * 
- * V26  09/27/20 10:50
+ * V26  09/27/20 10:56
  * 
  *      *** FORKED marlin/bugfix-2.0.x to KamikazeBDM/Marlin ***
  * 
