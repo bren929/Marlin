@@ -21,15 +21,39 @@
  */
 #pragma once
 
+//#ifndef TARGET_STM32F4
 #if NOT_TARGET(STM32F4)
   #error "Oops! Select an STM32F4 board in 'Tools > Board.'"
 #endif
 
+
+
+
+
 // Use one of these or SDCard-based Emulation will be used
 #if NO_EEPROM_SELECTED
+
+
   //#define SRAM_EEPROM_EMULATION                 // Use BackSRAM-based EEPROM emulation
-  #define FLASH_EEPROM_EMULATION                  // Use Flash-based EEPROM emulation
+
+
+
+  // disabled BDM per:
+    /*
+            "In file included from Marlin\src\HAL\STM32\../../inc/MarlinConfig.h:42,  from Marlin\src\HAL\STM32\HAL_SPI.cpp:25:
+          Marlin\src\HAL\STM32\../../inc/../HAL/STM32/inc/SanityCheck.h:44:4: warning: #warning "FLASH_EEPROM_EMULATION may cause long delays when writing and should not be used while printing." [-Wcpp]
+            44 |   #warning "FLASH_EEPROM_EMULATION may cause long delays when writing and should not be used while printing."
+          Marlin\src\HAL\STM32\../../inc/../HAL/STM32/inc/SanityCheck.h:45:4: error: #error "Disable PRINTCOUNTER or choose another EEPROM emulation.""
+    "
+    */
+
+  //#define FLASH_EEPROM_EMULATION                  // Use Flash-based EEPROM emulation
+
 #endif
+
+
+
+
 
 #if ENABLED(FLASH_EEPROM_EMULATION)
   // Decrease delays and flash wear by spreading writes across the
@@ -37,10 +61,14 @@
   #define FLASH_EEPROM_LEVELING
 #endif
 
+
+
+
 //
-// Servos
+// Servos / BL-TOUCH
 //
-#define SERVO0_PIN                          PA1
+#define SERVO0_PIN                          PA1   // ** USING FOR CONTROLLER FAN ( PWM ?)
+#define SERVO1_PIN                          PA2   // ** USING FOR CASE LIGHT( PWM ?)
 
 //
 // Trinamic Stallguard pins
@@ -55,10 +83,16 @@
 //
 // Limit Switches
 //
+
+
+
 #ifdef X_STALL_SENSITIVITY
   #define X_STOP_PIN                  X_DIAG_PIN
   #if X_HOME_DIR < 0
     #define X_MAX_PIN                       PE15  // E0
+    #ifndef X_MIN_PIN
+      //#define  X_MIN_PIN                      PB10  // BDM
+    #endif
   #else
     #define X_MIN_PIN                       PE15  // E0
   #endif
@@ -71,6 +105,9 @@
   #define Y_STOP_PIN                  Y_DIAG_PIN
   #if Y_HOME_DIR < 0
     #define Y_MAX_PIN                       PE10  // E1
+    #ifndef Y_MIN_PIN
+      //#define  Y_MIN_PIN                      PE12  // BDM
+    #endif
   #else
     #define Y_MIN_PIN                       PE10  // E1
   #endif
@@ -90,6 +127,12 @@
   #define Z_MIN_PIN                         PG8   // Z-
   #define Z_MAX_PIN                         PG5   // E2
 #endif
+
+
+
+
+
+
 
 //
 // Z Probe must be this pin
@@ -178,7 +221,8 @@
    * Hardware serial communication ports.
    * If undefined software serial is used according to the pins below
    */
-  //#define X_HARDWARE_SERIAL  Serial1
+
+  //#define X_HARDWARE_SERIAL  Serial
   //#define X2_HARDWARE_SERIAL Serial1
   //#define Y_HARDWARE_SERIAL  Serial1
   //#define Y2_HARDWARE_SERIAL Serial1
@@ -218,38 +262,66 @@
 //
 // Temperature Sensors
 //
+#define TEMP_BED_PIN                        PF3   // T0 <-> Bed
 #define TEMP_0_PIN                          PF4   // T1 <-> E0
 #define TEMP_1_PIN                          PF5   // T2 <-> E1
 #define TEMP_2_PIN                          PF6   // T3 <-> E2
-#define TEMP_BED_PIN                        PF3   // T0 <-> Bed
+
+
 
 //
 // Heaters / Fans
 //
 #define HEATER_0_PIN                        PB1   // Heater0
 #define HEATER_1_PIN                        PD14  // Heater1
-#define HEATER_2_PIN                        PB0   // Heater1
+#define HEATER_2_PIN                        PB0   // Heater2
 #define HEATER_BED_PIN                      PD12  // Hotbed
-#define FAN_PIN                             PC8   // Fan0
-#define FAN1_PIN                            PE5   // Fan1
-#define FAN2_PIN                            PE6
+
+
+#define FAN_PIN                             PC8   // Fan0       PART Cooling Fan
+#define FAN1_PIN                            PE5   // Fan1       EXTRUDER Fan
+//#define FAN2_PIN                          PE6   // Fan2       CHAMBER_AUTO_FAN_PIN (broken 9/25/2020)
+
+
+// Extension-1 Header
+#define NEO_PIN                             PC9   // 1-2 PWM for neo-pixel lights in chamber
+
+#ifndef HEATER_CHAMBER_PIN
+  #define HEATER_CHAMBER_PIN                PF9   // Chamber heater on/off pin
+#endif
+#define FAN2_PIN                            PC4   // Fan2       CHAMBER_AUTO_FAN_PIN
+
+
+
+// Extension-2 Header
+
+
+
 
 #ifndef E0_AUTO_FAN_PIN
-  #define E0_AUTO_FAN_PIN               FAN1_PIN
+  #define E0_AUTO_FAN_PIN               FAN1_PIN      // **
 #endif
+
+
+
+
+
+
 
 //
 // Misc. Functions
 //
 
 #ifndef SDCARD_CONNECTION
-  #define SDCARD_CONNECTION                  LCD
+//  #define SDCARD_CONNECTION                  LCD
+  #define SDCARD_CONNECTION                  ONBOARD
 #endif
 
 //
 // Onboard SD card
 // Must use soft SPI because Marlin's default hardware SPI is tied to LCD's EXP2
 //
+<<<<<<< Updated upstream
 #if SD_CONNECTION_IS(LCD)
 
   #define SD_DETECT_PIN                     PF12
@@ -262,14 +334,21 @@
   // function with Hardware SPI. This is not currently configurable in the HAL,
   // so force Software SPI to work around this issue.
   #define SOFTWARE_SPI
+=======
+#if SD_CONNECTION_IS(ONBOARD)
+  #define SOFTWARE_SPI                            // Use soft SPI for onboard SD
+>>>>>>> Stashed changes
   #define SDSS                              PA4
   #define SCK_PIN                           PA5
   #define MISO_PIN                          PA6
   #define MOSI_PIN                          PB5
+<<<<<<< Updated upstream
   #define SD_DETECT_PIN                     PB11
 
 #elif SD_CONNECTION_IS(CUSTOM_CABLE)
   #error "CUSTOM_CABLE is not a supported SDCARD_CONNECTION for this board"
+=======
+>>>>>>> Stashed changes
 #endif
 
 /**
@@ -296,6 +375,9 @@
 
   #define BEEPER_PIN                        PG4
   #define BTN_ENC                           PA8
+  #if SD_CONNECTION_IS(LCD)
+    #define SDSS                            PB12  // Uses default hardware SPI for LCD's SD
+  #endif
 
   #if ENABLED(CR10_STOCKDISPLAY)
 
@@ -316,8 +398,11 @@
 
     #define DOGLCD_A0                       PG6
     #define DOGLCD_CS                       PG3
+<<<<<<< Updated upstream
     #define BTN_EN1                         PG10
     #define BTN_EN2                         PF11
+=======
+>>>>>>> Stashed changes
 
   #else
 
@@ -325,6 +410,9 @@
 
     #define BTN_EN1                         PG10
     #define BTN_EN2                         PF11
+    #define SD_DETECT_PIN                   PF12
+
+    #define LCD_SDSS                        PB12
 
     #define LCD_PINS_ENABLE                 PD11
     #define LCD_PINS_D4                     PG2
