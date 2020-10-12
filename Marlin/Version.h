@@ -34,7 +34,8 @@
  * Vx  mm/dd/YY 19:00 24HR
  * 
  * V27  10/01/20 14:00
- *      SYNC:   Sync'd with github/Marlin/bugfix-2.0.x ( date 10/01/2020 ) - 19 updates.
+ *      SYNC:   Sync'd with github/Marlin/bugfix-2.0.x ( date 10/12/2020 ).
+ *          
  * 
  * V26  09/27/20 10:56
  * 
