@@ -28,14 +28,61 @@
 /**
  * Marlin release version identifier
  */
-#define COMPILE_VERSION "27" 
+#define COMPILE_VERSION "31" 
 
 /*******************************************************************************************************
- * Vx  mm/dd/YY 19:00 24HR
+ **-----------------------** 
+ * Vx  mm/dd/YY HH:mm 24HR
+ **-----------------------**
  * 
- * V27  10/01/20 14:00
+ * V31  10/12/20 xx:xx
+ *      
+ * 
+ * V30  10/12/20 18:04
+ * 
+ *      CORRECTED: bugfix display version to 2.0.7
+ *      #define X_CURRENT       820
+ *      #define DEFAULT_MAX_ACCELERATION      { 4000, 4000, 50, 9000, 9000 }
+ *      #define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
+ *      #define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
+ *      #define DEFAULT_TRAVEL_ACCELERATION   4000    // X, Y, Z acceleration for travel (non printing) moves
+ *      #define THERMAL_PROTECTION_CHAMBER_PERIOD    60 // Seconds
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.15, 80.15, 400, 402, 402 }
+ *      #define SDCARD_CONNECTION                  ONBOARD   // ( pins_BTT_SKR_PRO_common.h )
+ * 
+ *      #elif CHAMBER_FAN_MODE == 2
+ *        #define CHAMBER_FAN_BASE  32   // Minimum chamber fan PWM (0-255)
+ *        #define CHAMBER_FAN_FACTOR 64   // PWM increase per °C difference from target
+ *      #endif
+ * 
+ *      #define PRINTCOUNTER
+ *      #define HOMING_FEEDRATE_XY (50*60)
+ *      #define HOMING_FEEDRATE_Z  (4*60)
+ *      #define SDCARD_CONNECTION ONBOARD
+ *      #define XYZ_NO_FRAME
+ *      //#define MENU_HOLLOW_FRAME
+ *      #define USE_SMALL_INFOFONT
+ *      #define BOOT_MARLIN_LOGO_ANIMATED
+
+ * V29  10/12/20 12:36
+ *      REMOVED: #define REPORT_FAN_CHANGE   // Report the new fan speed when changed by M106 (and others)
+ *      FIXED: if SD_CONNECTION_IS(ONBOARD) // needs ONBOARD !
+ *      ADDED: #define PE_LEDS_COMPLETED_TIME  (10*60)  // 10 minutes before returning to normal NEO color after print completes.
+ * 
+ * 
+ * V28  10/12/20 12:15
+ *      CHANGED: #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.1, 80.1, 400, 402, 402 }
+ *      #define X_BED_SIZE 235
+ *      #define Y_BED_SIZE 235
+ *      #define STARTUP_COMMANDS "G28"
+ * 
+ * V27  10/12/20 11:48
  *      SYNC:   Sync'd with github/Marlin/bugfix-2.0.x ( date 10/12/2020 ).
- *          
+ *      LOST: Config files got over-written by git. ( on or around 10/10/2020)
+ *      RESTORED: Settings from V26 backup files ( 10/08/2020 )
+ *      FIXED: Heated Chamber Options in configuration_adv.h ( some options were missing 06 config file? )
+ *      ENABLED: #define CHAMBER_FAN (this was missing and not working)
+ * 
  * 
  * V26  09/27/20 10:56
  * 
@@ -229,8 +276,8 @@
 
 
 
-#define SHORT_BUILD_VERSION "bugfix-2.0.6.0." COMPILE_VERSION
-#define STRING_CONFIG_H_AUTHOR "(BDM, bugfix-2.0.6.0-" COMPILE_VERSION ")" // Who made the changes.
+#define SHORT_BUILD_VERSION "bugfix-2.0.7-" COMPILE_VERSION
+#define STRING_CONFIG_H_AUTHOR "BDM" // Who made the changes.
 
 // Name displayed in the LCD "Ready" message and Info menu
 #define CUSTOM_MACHINE_NAME "SKR PRO 1.1 tmc-2209"
@@ -239,7 +286,7 @@
  * Verbose version identifier which should contain a reference to the location
  * from where the binary was downloaded or the source code was compiled.
  */
-#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " (Github)"
+#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " (Github/kamikazebdm/marlin)"
 
 /**
  * The STRING_DISTRIBUTION_DATE represents when the binary file was built,
@@ -253,7 +300,7 @@
 /**
  * Defines a generic printer name to be output to the LCD after booting Marlin.
  */
-#define MACHINE_NAME "JAM-ENG"
+#define MACHINE_NAME "JAM-ENG Ender3pro"
 
 /**
  * The SOURCE_CODE_URL is the location where users will find the Marlin Source
