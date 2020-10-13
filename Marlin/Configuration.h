@@ -530,6 +530,10 @@
 #define BED_MAXTEMP      150
 
 
+
+
+
+
 //===========================================================================
 //============================= PID Settings ================================
 //===========================================================================
@@ -547,45 +551,32 @@
   #define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
-<<<<<<< HEAD
-  // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-
-//////////////////////////////////////////
-//
-// E3D Chimera Head ( E0 - 40W, E1 30W )
-//
-//////////////////////////////////////////
-// E0 - 40w  09/27/2020
-
-//M301 E0 P22.68 I1.94 D66.19
- #define DEFAULT_Kp 22.68
- #define DEFAULT_Ki 1.94
- #define DEFAULT_Kd 66.19
-
-
-// E1 30w heater 09/27/2020
-//  M301 E1 P32.83 I2.83 D95.09
-// #define DEFAULT_Kp 32.83
-// #define DEFAULT_Ki 2.83
-// #define DEFAULT_Kd 95.09
-
-
-
-=======
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  22.20,  22.20 }
-    #define DEFAULT_Ki_LIST {   1.08,   1.08 }
-    #define DEFAULT_Kd_LIST { 114.00, 114.00 }
+    #define DEFAULT_Kp_LIST {  22.68,  32.83 }
+    #define DEFAULT_Ki_LIST {   1.94,   2.83 }
+    #define DEFAULT_Kd_LIST {   66.19, 95.09 }
   #else
-    #define DEFAULT_Kp  22.20
-    #define DEFAULT_Ki   1.08
-    #define DEFAULT_Kd 114.00
+
+    //////////////////////////////////////////
+    //
+    // E3D Chimera Head ( E0 - 40W, E1 30W )
+    // E0 - 40w  09/27/2020
+    // M301 E0 P22.68 I1.94 D66.19
+    //
+    //////////////////////////////////////////
+    #define DEFAULT_Kp 22.68
+    #define DEFAULT_Ki 1.94
+    #define DEFAULT_Kd 66.19
+
   #endif
->>>>>>> upstream/bugfix-2.0.x
+
 #endif // PIDTEMP
+
+
+
 
 //===========================================================================
 //====================== PID > Bed Temperature Control ======================
@@ -628,19 +619,19 @@
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 
+  //////////////////////////////////////////
+  //
   // Stock Creality Ender 3 pro Heated Bed
   // 09/27/2020
   // M304 P177.32 I34.68 D604.47
+  //
+  //////////////////////////////////////////
 
  #define DEFAULT_bedKp 177.32
  #define DEFAULT_bedKi 34.68
  #define DEFAULT_bedKd 604.47
 
 
-
-
-
-  // FIND YOUR OWN: "M303 E-1 C8 S90 U1" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
 
 #if EITHER(PIDTEMP, PIDTEMPBED)
@@ -650,14 +641,6 @@
   #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 #endif
-
-
-
-
-
-
-
-
 
 
 
@@ -881,9 +864,10 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
+
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 }
-// E0/E1 = BMG direct drive steppers ( pancake ) with volumetric setting in PrusaSlicer ( 401.0 normal steps )
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 402, 402 }
+// E0/E1 = BMG direct drive steppers ( pancake )  ( 402.0 normal steps )
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.15, 80.15, 400, 402, 402 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -904,7 +888,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 1500, 1500, 50, 9000, 9000 }
+#define DEFAULT_MAX_ACCELERATION      { 4000, 4000, 50, 9000, 9000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -921,7 +905,7 @@
  */
 #define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_TRAVEL_ACCELERATION   4000    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
@@ -1345,8 +1329,8 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 200
-#define Y_BED_SIZE 200
+#define X_BED_SIZE 235
+#define Y_BED_SIZE 235
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1691,10 +1675,8 @@
 #endif
 
 // Homing speeds (mm/min)
-//#define HOMING_FEEDRATE_XY (50*60)
-//#define HOMING_FEEDRATE_Z  (4*60)
-#define HOMING_FEEDRATE_XY (60*60)
-#define HOMING_FEEDRATE_Z  (6*60)
+#define HOMING_FEEDRATE_XY (50*60)
+#define HOMING_FEEDRATE_Z  (4*60)
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
@@ -1852,24 +1834,23 @@
 //
 //#define INCH_MODE_SUPPORT
 
-//
+
+
+
+
+
+
+
+
+
+
+
+
 // M149 Set temperature units support
 //
 //#define TEMPERATURE_UNITS_SUPPORT
 
 // @section temperature
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2061,6 +2042,13 @@
  */
 #define PRINTJOB_TIMER_AUTOSTART
 
+
+
+
+
+
+
+
 /**
  * Print Counter
  *
@@ -2073,7 +2061,7 @@
  *
  * View the current statistics with M78.
  */
-//#define PRINTCOUNTER
+#define PRINTCOUNTER
 
 
 
@@ -2867,7 +2855,24 @@
 // Temperature status LEDs that display the hotend and bed temperature.
 // If all hotends, bed temperature, and target temperature are under 54C
 // then the BLUE led is on. Otherwise the RED led is on. (1C hysteresis)
-#define TEMP_STAT_LEDS
+//#define TEMP_STAT_LEDS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Support for the BariCUDA Paste Extruder
 //#define BARICUDA
@@ -2927,6 +2932,7 @@
 
 
 
+#define NEO_PIN                             PC9   // PWM for neo-pixel lights in chamber
 
 // Support for Adafruit NeoPixel LED driver
 #define NEOPIXEL_LED
