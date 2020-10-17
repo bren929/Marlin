@@ -27,21 +27,21 @@
 
 // Use one of these or SDCard-based Emulation will be used
 #if NO_EEPROM_SELECTED
-  //#define SRAM_EEPROM_EMULATION                 // Use BackSRAM-based EEPROM emulation
 
-
+  //#define SRAM_EEPROM_EMULATION             // Use BackSRAM-based EEPROM emulation
+ #define FLASH_EEPROM_EMULATION               // Use Flash-based EEPROM emulation
 
   // disabled BDM per:
     /*
             "In file included from Marlin\src\HAL\STM32\../../inc/MarlinConfig.h:42,  from Marlin\src\HAL\STM32\HAL_SPI.cpp:25:
           Marlin\src\HAL\STM32\../../inc/../HAL/STM32/inc/SanityCheck.h:44:4: warning: #warning "FLASH_EEPROM_EMULATION may cause long delays when writing and should not be used while printing." [-Wcpp]
             44 |   #warning "FLASH_EEPROM_EMULATION may cause long delays when writing and should not be used while printing."
-          Marlin\src\HAL\STM32\../../inc/../HAL/STM32/inc/SanityCheck.h:45:4: error: #error "Disable PRINTCOUNTER or choose another EEPROM emulation.""
+          Marlin\src\HAL\STM32\../../inc/../HAL/STM32/inc/SanityCheck.h:45:4: error: 
+          
+          #error "Disable PRINTCOUNTER or choose another EEPROM emulation.""
     "
     */
-
-  //#define FLASH_EEPROM_EMULATION                  // Use Flash-based EEPROM emulation
-
+ 
 #endif
 
 #if ENABLED(FLASH_EEPROM_EMULATION)
@@ -49,9 +49,6 @@
   // 128 kB sector allocated for EEPROM emulation.
   #define FLASH_EEPROM_LEVELING
 #endif
-
-
-
 
 //
 // Servos / BL-TOUCH
@@ -310,7 +307,7 @@
 // Onboard SD card
 // Must use soft SPI because Marlin's default hardware SPI is tied to LCD's EXP2
 //
-#if SD_CONNECTION_IS(ONBOARD)
+#if SD_CONNECTION_IS(SPI)
 
   #define SD_DETECT_PIN                     PF12
   #define SDSS                              PB12
@@ -327,6 +324,7 @@
   #define MISO_PIN                          PA6
   #define MOSI_PIN                          PB5
   #define SD_DETECT_PIN                     PB11
+
 
 #elif SD_CONNECTION_IS(CUSTOM_CABLE)
   #error "CUSTOM_CABLE is not a supported SDCARD_CONNECTION for this board"
