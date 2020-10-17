@@ -147,14 +147,14 @@
 
   #define CHAMBER_FAN               // Enable a fan on the chamber
   #if ENABLED(CHAMBER_FAN)
-    #define CHAMBER_FAN_MODE 2        // Fan control mode: 0=Static; 1=Linear increase when temp is higher than target; 2=V-shaped curve.
+    #define CHAMBER_FAN_MODE 1        // Fan control mode: 0=Static; 1=Linear increase when temp is higher than target; 2=V-shaped curve.
     #if CHAMBER_FAN_MODE == 0
       #define CHAMBER_FAN_BASE  255   // Chamber fan PWM (0-255)
     #elif CHAMBER_FAN_MODE == 1
-      #define CHAMBER_FAN_BASE  128   // Base chamber fan PWM (0-255); turns on when chamber temperature is above the target
-      #define CHAMBER_FAN_FACTOR 25   // PWM increase per °C above target
+      #define CHAMBER_FAN_BASE  64   // Base chamber fan PWM (0-255); turns on when chamber temperature is above the target
+      #define CHAMBER_FAN_FACTOR 64   // PWM increase per °C above target
     #elif CHAMBER_FAN_MODE == 2
-      #define CHAMBER_FAN_BASE  32   // Minimum chamber fan PWM (0-255)
+      #define CHAMBER_FAN_BASE  64   // Minimum chamber fan PWM (0-255)
       #define CHAMBER_FAN_FACTOR 64   // PWM increase per °C difference from target
     #endif
   #endif
@@ -1377,7 +1377,7 @@
   #endif
 
   #if HAS_MARLINUI_U8GLIB
-    //#define PRINT_PROGRESS_SHOW_DECIMALS // Show progress with decimal digits
+    #define PRINT_PROGRESS_SHOW_DECIMALS // Show progress with decimal digits
   #endif
 
   #if EITHER(HAS_MARLINUI_HD44780, IS_TFTGLCD_PANEL)
@@ -1392,11 +1392,15 @@
   #endif
 #endif
 
+
+
+
+
 #if ENABLED(SDSUPPORT)
 
   // The standard SD detect circuit reads LOW when media is inserted and HIGH when empty.
   // Enable this option and set to HIGH if your SD cards are incorrectly detected.
-  //#define SD_DETECT_STATE HIGH
+  #define SD_DETECT_STATE HIGH
 
   //#define SDCARD_READONLY                 // Read-only SD card (to save over 2K of flash)
 
@@ -1423,24 +1427,6 @@
   #if ENABLED(PRINTER_EVENT_LEDS)
     #define PE_LEDS_COMPLETED_TIME  (10*60) // (seconds) Time to keep the LED "done" color before restoring normal illumination
   #endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1584,6 +1570,11 @@
     //#define USE_UHS3_USB
   #endif
 
+
+
+
+
+
   /**
    * When using a bootloader that supports SD-Firmware-Flashing,
    * add a menu item to activate SD-FW-Update on the next reboot.
@@ -1600,8 +1591,15 @@
     #define SD_FIRMWARE_UPDATE_INACTIVE_VALUE 0xFF
   #endif
 
+
   // Add an optimized binary file transfer mode, initiated with 'M28 B1'
   //#define BINARY_FILE_TRANSFER
+
+
+
+
+
+
 
   /**
    * Set this option to one of the following (or the board's defaults apply):
@@ -1612,7 +1610,7 @@
    *
    * :[ 'LCD', 'ONBOARD', 'CUSTOM_CABLE' ]
    */
-  #define SDCARD_CONNECTION ONBOARD
+  //#define SDCARD_CONNECTION ONBOARD
 
 #endif // SDSUPPORT
 
@@ -1629,6 +1627,11 @@
  * storage device. This option hides the SD card from the host PC.
  */
 //#define NO_SD_HOST_DRIVE   // Disable SD Card access over USB (for security).
+
+
+
+
+
 
 /**
  * Additional options for Graphical Displays
@@ -1996,7 +1999,7 @@
 #define LIN_ADVANCE
 #if ENABLED(LIN_ADVANCE)
   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
-  #define LIN_ADVANCE_K 0.07    // Unit: mm compression per 1mm/s extruder speed
+  #define LIN_ADVANCE_K 0.03    // Unit: mm compression per 1mm/s extruder speed
   //#define LA_DEBUG            // If enabled, this will generate debug information output over USB.
   //#define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
 #endif
