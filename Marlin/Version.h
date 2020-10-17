@@ -28,15 +28,52 @@
 /**
  * Marlin release version identifier
  */
-#define COMPILE_VERSION "31" 
+#define COMPILE_VERSION "34" 
 
 /*******************************************************************************************************
- **-----------------------** 
- * Vx  mm/dd/YY HH:mm 24HR
- **-----------------------**
+  * Vx  mm/dd/YY HH:mm 24HR
+
+ * V34  10/14/20 xx:xx
  * 
- * V31  10/12/20 xx:xx
- *      
+ * V33  10/13/20 17:01
+ * 
+ *    #elif CHAMBER_FAN_MODE == 1
+ *        #define CHAMBER_FAN_BASE  64   // Base chamber fan PWM (0-255); turns on when chamber temperature is above the target
+ *        #define CHAMBER_FAN_FACTOR 64   // PWM increase per °C above target
+ *        
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.25, 80.25, 400, 402, 402 }
+ * 
+ * V32  10/13/20 14:53
+ * 
+ *          ** WORKING ONBOARD SD CARD **
+ * 
+ *      #define FLASH_EEPROM_EMULATION
+ *      //#define PRINTCOUNTER
+ * 
+ *      #elif SD_CONNECTION_IS(ONBOARD)
+ * 
+ *      // The SKR Pro's ONBOARD SD interface is on SPI1.
+ *      // Due to a pull resistor on the clock line, it needs to use SPI Data Mode 3 to
+ *      // function with Hardware SPI. This is not currently configurable in the HAL,
+ *      // so force Software SPI to work around this issue.
+ *      #define SOFTWARE_SPI
+ *      #define SDSS                              PA4
+ *      #define SCK_PIN                           PA5
+ *      #define MISO_PIN                          PA6
+ *      #define MOSI_PIN                          PB5
+ *      #define SD_DETECT_PIN                     PB11
+ * 
+ * 
+ * 
+ * 
+ * V31  10/13/20 14:10
+ * 
+ *          ** DIDNT WORK **
+ * 
+ *      EEPROM Changes. -  
+ *      #define SRAM_EEPROM_EMULATION
+ *      #define EEPROM_AUTO_INIT
+ *           
  * 
  * V30  10/12/20 18:04
  * 
