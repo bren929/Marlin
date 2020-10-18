@@ -21,19 +21,27 @@
  */
 #pragma once
 
-////////////////////////////
-// VENDOR VERSION EXAMPLE //
-////////////////////////////
 
-/**
- * Marlin release version identifier
- */
+/*************************************
+ * Marlin bugfix-2.0.x
+ * Compiled version identifier
+ ************************************/
 #define COMPILE_VERSION "34" 
 
-/*******************************************************************************************************
-  * Vx  mm/dd/YY HH:mm 24HR
+#define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
+#define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
+#define CUSTOM_MACHINE_NAME "SKR PRO 1.1 tmc-2209"  // Name displayed in the LCD "Ready" message and Info menu
+#define MACHINE_NAME "JAM-ENG Ender3pro"
 
- * V34  10/17/20 07:25
+/*******************************************************************************************************
+ * Vx  mm/dd/YY HH:mm 24HR
+ * 
+ * V35  10/17/20 xx:xx
+ * 
+ * V34  10/17/20 08:16
+ *      upstream merges
+ *      CONFIGURATION_H_VERSION 020008
+ *      Tag 2.0.7.2
  * 
  * V33  10/13/20 17:01
  * 
@@ -313,11 +321,7 @@
 
 
 
-#define SHORT_BUILD_VERSION "bugfix-2.0.7-" COMPILE_VERSION
-#define STRING_CONFIG_H_AUTHOR "BDM" // Who made the changes.
 
-// Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "SKR PRO 1.1 tmc-2209"
 
 /**
  * Verbose version identifier which should contain a reference to the location
@@ -332,12 +336,6 @@
  */
 #define STRING_DISTRIBUTION_DATE  __DATE__ " " __TIME__
 
-
-
-/**
- * Defines a generic printer name to be output to the LCD after booting Marlin.
- */
-#define MACHINE_NAME "JAM-ENG Ender3pro"
 
 /**
  * The SOURCE_CODE_URL is the location where users will find the Marlin Source
