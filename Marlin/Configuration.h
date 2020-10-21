@@ -555,21 +555,22 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  22.68,  32.83 }
-    #define DEFAULT_Ki_LIST {   1.94,   2.83 }
-    #define DEFAULT_Kd_LIST {   66.19, 95.09 }
+    #define DEFAULT_Kp_LIST {  22.76,  32.83 }
+    #define DEFAULT_Ki_LIST {   1.95,   2.83 }
+    #define DEFAULT_Kd_LIST {   66.44, 95.09 }
   #else
 
     //////////////////////////////////////////
     //
     // E3D Chimera Head ( E0 - 40W, E1 30W )
-    // E0 - 40w  09/27/2020
-    // M301 E0 P22.68 I1.94 D66.19
+    // E0 - 40w  10/20/2020
+    // M301 E0 P22.76 I1.95 D66.44
     //
     //////////////////////////////////////////
-    #define DEFAULT_Kp 22.68
-    #define DEFAULT_Ki 1.94
-    #define DEFAULT_Kd 66.19
+	#define DEFAULT_Kp 22.76
+	#define DEFAULT_Ki 1.95
+	#define DEFAULT_Kd 66.44
+
 
   #endif
 
@@ -873,14 +874,14 @@
 
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 }
 // E0/E1 = BMG direct drive steppers ( pancake )  ( 402.0 normal steps )
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.40, 80.35, 400, 401.90, 401.90 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.40, 80.35, 400.0, 402, 402 }
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 12, 500, 500 }
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 10, 500, 500 }
 
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
@@ -894,7 +895,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 5000, 5000, 125, 9000, 9000 }
+#define DEFAULT_MAX_ACCELERATION      { 5000, 5000, 25, 9000, 9000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -909,9 +910,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          1500    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  1500    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   1500    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          750    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  750    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   900    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
