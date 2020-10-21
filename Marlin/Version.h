@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "35" 
+#define COMPILE_VERSION "36" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,7 +36,11 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
  * 
- * V35  10/20/20 11:55
+ * V36  10/20/21 13:55
+ * 		firmware sync of settings
+ *      upstream merges
+ *	
+ * V35  10/20/20 11:56
  * 		firmware sync of settings
  *		READDED: #define S_CURVE_ACCELERATION
  *      upstream merges
