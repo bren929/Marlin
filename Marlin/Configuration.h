@@ -878,7 +878,7 @@
 
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 }
 // E0/E1 = BMG direct drive steppers ( pancake )  ( 402.0 normal steps )
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.40, 80.35, 400.0, 402, 402 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.40, 80.35, 400.0, 401.9, 401.9 }
 
 /**
  * Default Max Feed Rate (mm/s)
