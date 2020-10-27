@@ -36,8 +36,13 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
  * 
- * V37  10/20/xx xx:xx
- *
+ * V37  10/20/26 18:25
+ *      re-homed build plate
+ *      installed new Y end-stop switch (broken)
+ *      reset x,y build plate dimensions
+ *          #define X_MAX_POS X_BED_SIZE
+ *          #define Y_MAX_POS Y_BED_SIZE
+ * 
  * V36  10/20/21 14:05
  * 		firmware sync of settings
  *      upstream merges
