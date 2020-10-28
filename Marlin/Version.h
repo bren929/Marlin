@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "37" 
+#define COMPILE_VERSION "38" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -35,14 +35,18 @@
 
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
+
+ * V38  10/20/xx xx:xx
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.375, 80.375, 400.0, 401.75, 401.75 }
  * 
- * V37  10/20/26 18:25
+ * V37  10/20/26 18:27
  *      re-homed build plate
  *      installed new Y end-stop switch (broken)
  *      reset x,y build plate dimensions
  *          #define X_MAX_POS X_BED_SIZE
  *          #define Y_MAX_POS Y_BED_SIZE
- * 
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.40, 80.35, 400.0, 401.9, 401.9 }
+ * 8
  * V36  10/20/21 14:05
  * 		firmware sync of settings
  *      upstream merges
