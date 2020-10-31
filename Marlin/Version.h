@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "38" 
+#define COMPILE_VERSION "39" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -35,17 +35,42 @@
 
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
-
- * V38  10/20/xx xx:xx
- *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.375, 80.375, 400.0, 401.75, 401.75 }
  * 
+ * V39  10/20/xx xx:x
+ * 
+ * V38  10/20/28 17:06
+ *      upstream merges
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.375, 80.375, 400.0, 401.90, 401.90 }
+ *      #define X_BED_SIZE 245
+ *      #define Y_BED_SIZE 230
+ * 
+ *      M900 T0/T1 K0.02
+ * 
+ *      M906 X550 Y550 Z640
+ *      M906 I1 Z640
+ *      M906 T0 E640
+ *      M906 T1 E640
+ * 
+ *      M201 X1000.00 Y1000.00 Z150.00
+ *      M201 T0 E9000.00
+ *      M201 T1 E9000.00
+ * 
+ *      M203 X500.00 Y500.00 Z10.00
+ *      M203 T0 E650.00
+ *      M203 T1 E650.00
+ * 
+ *      M204 P500.00 R500.00 T500.00
+ *      M205 B20000.00 S0.00 T0.00 J0.01
+ *      
  * V37  10/20/26 18:27
  *      re-homed build plate
  *      installed new Y end-stop switch (broken)
  *      reset x,y build plate dimensions
  *          #define X_MAX_POS X_BED_SIZE
  *          #define Y_MAX_POS Y_BED_SIZE
- *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.40, 80.35, 400.0, 401.9, 401.9 }
+ *      #define X_BED_SIZE 240
+ *      #define Y_BED_SIZE 230
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.40, 80.35, 400.0, 401.90, 401.90 }
  * 8
  * V36  10/20/21 14:05
  * 		firmware sync of settings
