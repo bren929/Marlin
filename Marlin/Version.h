@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "39" 
+#define COMPILE_VERSION "40" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -35,8 +35,28 @@
 
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
+ *      
+ * V40  11/01/20 xx:xx
+ *   
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.37, 80.37, 400.25, 401.70, 401.70 }
+ *      SuperSlicer - XY Compensation - Inner: -0.070, Holes: -0.070
  * 
- * V39  10/20/xx xx:x
+ * V39  10/31/20 09:44
+ *      upstream merges
+ * 
+ *      #define HEATER_0_MAXTEMP 315
+ *      #define HEATER_1_MAXTEMP 315
+ * 
+ *      #define LIN_ADVANCE_K 0.02 
+ *      M906 X550 Y550 Z550
+ *      M906 I1 Z550, M906 T0 E550, M906 T1 E550
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.375, 80.375, 400.0, 401.70, 401.70 }
+ *      #define DEFAULT_MAX_FEEDRATE          { 500, 500, 10, 650, 650 }
+ *      #define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 150, 9000, 9000 }
+ *      #define JUNCTION_DEVIATION_MM 0.013
+ *      M204 P500.00 R500.00 T500.00
+ *      M205 B20000.00 S0.00 T0.00 J0.013
+ * 
  * 
  * V38  10/20/28 17:06
  *      upstream merges
