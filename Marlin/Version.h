@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "40" 
+#define COMPILE_VERSION "42" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -35,11 +35,54 @@
 
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
+
+ * V42  11/xx/20 xx:xx
  *      
- * V40  11/01/20 xx:xx
+ * 
+ * V41  11/01/20 17:40
+ *      #define XY_FREQUENCY_LIMIT      10 
+ *          #define XY_FREQUENCY_MIN_PERCENT 5
+ * 
+ *      #define CASE_LIGHT_DEFAULT_BRIGHTNESS 255
+ *      #define HOMING_BACKOFF_POST_MM { 5, 0, 10 } 
+ * 
+ *      FIXED: #define CUSTOM_USER_MENUS  (poorly formatted syntax)
+ *          #define PREHEAT_3_LABEL         "PLA PRO-3"
+ *          #define PREHEAT_3_TEMP_HOTEND   205
+ *          #define PREHEAT_3_TEMP_BED      55
+ *          #define PREHEAT_3_FAN_SPEED     0 // Value from 0 to 255
+ *          #define PREHEAT_4_LABEL         "PETG"
+ *          #define PREHEAT_4_TEMP_HOTEND   235
+ *          #define PREHEAT_4_TEMP_BED      70
+ *          #define PREHEAT_4_FAN_SPEED     0 // Value from 0 to 255
+ *          #define PREHEAT_5_LABEL         "HIPS"
+ *          #define PREHEAT_5_TEMP_HOTEND   255
+ *          #define PREHEAT_5_TEMP_BED      105
+ *          #define PREHEAT_5_FAN_SPEED     0 // Value from 0 to 255
+ *          #define PREHEAT_6_LABEL         "PC"
+ *          #define PREHEAT_6_TEMP_HOTEND   295
+ *          #define PREHEAT_6_TEMP_BED      120
+ *          #define PREHEAT_6_FAN_SPEED     0 // Value from 0 to 255
+ *          #define PREHEAT_7_LABEL         "NYLON"
+ *          #define PREHEAT_7_TEMP_HOTEND   275
+ *          #define PREHEAT_7_TEMP_BED      85
+ *          #define PREHEAT_7_FAN_SPEED     0 // Value from 0 to 255
+ * 
+ * V40  11/01/20 16:09
  *   
  *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.37, 80.37, 400.25, 401.70, 401.70 }
- *      SuperSlicer - XY Compensation - Inner: -0.070, Holes: -0.070
+ *      SuperSlicer Setting - XY Compensation - Inner: -0.070, Holes: -0.070
+ *      #define E1_CURRENT      570
+ *      #define E1_CURRENT      570
+ *      #define WATCH_CHAMBER_TEMP_PERIOD            120 // Seconds
+ *      #define THERMAL_PROTECTION_CHAMBER_PERIOD    120 // Seconds
+ *      #elif CHAMBER_FAN_MODE == 1
+ *          #define CHAMBER_FAN_BASE  32   // Base chamber fan PWM (0-255); turns on when chamber temperature is above the target
+ *          #define CHAMBER_FAN_FACTOR 32   // PWM increase per °C above target
+ *       #define NEOPIXEL_PIXELS 90    
+ *      #define NEOPIXEL_BRIGHTNESS 255 
+ *      //#define USE_SMALL_INFOFONT
+ *      #define CUSTOM_USER_MENUS  
  * 
  * V39  10/31/20 09:44
  *      upstream merges
