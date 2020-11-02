@@ -523,8 +523,8 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 315
-#define HEATER_1_MAXTEMP 315
+#define HEATER_0_MAXTEMP 325
+#define HEATER_1_MAXTEMP 325
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
 #define HEATER_4_MAXTEMP 275
@@ -1349,7 +1349,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 235
+#define Z_MAX_POS 230
 
 
 
@@ -1873,11 +1873,42 @@
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
-#define PREHEAT_2_TEMP_HOTEND 250
+#define PREHEAT_2_TEMP_HOTEND 245
 #define PREHEAT_2_TEMP_BED    105
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
 
+/**
+ * User-defined menu items that execute custom GCode
+ * on Configuration_adv.h
+      #define CUSTOM_USER_MENUS
+ */
+
+#define PREHEAT_3_LABEL         "PLA PRO-3"
+#define PREHEAT_3_TEMP_HOTEND   205
+#define PREHEAT_3_TEMP_BED      55
+#define PREHEAT_3_FAN_SPEED     0 // Value from 0 to 255
+
+
+#define PREHEAT_4_LABEL         "PETG"
+#define PREHEAT_4_TEMP_HOTEND   235
+#define PREHEAT_4_TEMP_BED      70
+#define PREHEAT_4_FAN_SPEED     0 // Value from 0 to 255
+
+#define PREHEAT_5_LABEL         "HIPS"
+#define PREHEAT_5_TEMP_HOTEND   255
+#define PREHEAT_5_TEMP_BED      105
+#define PREHEAT_5_FAN_SPEED     0 // Value from 0 to 255
+
+#define PREHEAT_6_LABEL         "PC"
+#define PREHEAT_6_TEMP_HOTEND   295
+#define PREHEAT_6_TEMP_BED      120
+#define PREHEAT_6_FAN_SPEED     0 // Value from 0 to 255
+
+#define PREHEAT_7_LABEL         "NYLON"
+#define PREHEAT_7_TEMP_HOTEND   275
+#define PREHEAT_7_TEMP_BED      85
+#define PREHEAT_7_FAN_SPEED     0 // Value from 0 to 255
 
 
 
@@ -3028,7 +3059,7 @@
 
 
 
-#define NEO_PIN                             PC9   // PWM for neo-pixel lights in chamber
+#define NEO_PIN             PC9   // PWM for neo-pixel lights in chamber
 
 // Support for Adafruit NeoPixel LED driver
 #define NEOPIXEL_LED
@@ -3037,9 +3068,9 @@
   #define NEOPIXEL_PIN     NEO_PIN       // LED driving pin ( PWM pin on Extension-1 header - Top left corner next to ground )
   //#define NEOPIXEL2_TYPE NEOPIXEL_TYPE
   //#define NEOPIXEL2_PIN    5
-  #define NEOPIXEL_PIXELS 60       // Number of LEDs in the strip. (Longest strip when NEOPIXEL2_SEPARATE is disabled.)
+  #define NEOPIXEL_PIXELS 90       // Number of LEDs in the strip. (Longest strip when NEOPIXEL2_SEPARATE is disabled.)
   //#define NEOPIXEL_IS_SEQUENTIAL   // Sequential display for temperature change - LED by LED. Disable to change all LEDs at once.
-  #define NEOPIXEL_BRIGHTNESS 127  // Initial brightness (0-255)
+  #define NEOPIXEL_BRIGHTNESS 255  // Initial brightness (0-255)
   #define NEOPIXEL_STARTUP_TEST  // Cycle through colors at startup
 
   // Support for second Adafruit NeoPixel LED driver controlled with M150 S1 ...
