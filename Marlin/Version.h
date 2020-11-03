@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "42" 
+#define COMPILE_VERSION "43" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -35,9 +35,16 @@
 
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
-
- * V42  11/xx/20 xx:xx
- *      
+ * 
+ * V43  11/xx/20 xx:xx
+ * 
+ * 
+ * V42  11/02/20 10:04
+ *      upstream updates: 11/02/2020
+ *      CHAMBER_FAN_MODE == 2
+ *          CHAMBER_FAN_BASE  0
+ *          CHAMBER_FAN_FACTOR 64
+ *      #define WATCH_BED_TEMP_PERIOD                120 // Seconds     
  * 
  * V41  11/01/20 17:40
  *      #define XY_FREQUENCY_LIMIT      10 
