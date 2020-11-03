@@ -140,7 +140,7 @@
 #if TEMP_SENSOR_CHAMBER
   #define CHAMBER_MINTEMP             5
   #define CHAMBER_MAXTEMP            60
-  #define TEMP_CHAMBER_HYSTERESIS     2   // (°C) Temperature proximity considered "close enough" to the target
+  #define TEMP_CHAMBER_HYSTERESIS     3   // (°C) Temperature proximity considered "close enough" to the target
   #define CHAMBER_LIMIT_SWITCHING
   #define HEATER_CHAMBER_PIN       PF9   // Chamber heater on/off pin
   #define HEATER_CHAMBER_INVERTING true
@@ -158,7 +158,7 @@
       #define CHAMBER_FAN_FACTOR 32   // PWM increase per °C above target
 
     #elif CHAMBER_FAN_MODE == 2
-      #define CHAMBER_FAN_BASE  64   // Minimum chamber fan PWM (0-255)
+      #define CHAMBER_FAN_BASE  0   // Minimum chamber fan PWM (0-255)
       #define CHAMBER_FAN_FACTOR 64   // PWM increase per °C difference from target
     #endif
   
@@ -234,7 +234,7 @@
   /**
    * As described above, except for the bed (M140/M190/M303).
    */
-  #define WATCH_BED_TEMP_PERIOD                60 // Seconds
+  #define WATCH_BED_TEMP_PERIOD                120 // Seconds
   #define WATCH_BED_TEMP_INCREASE               2 // Degrees Celsius
 #endif
 
