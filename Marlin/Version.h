@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "44" 
+#define COMPILE_VERSION "46" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -35,8 +35,22 @@
 
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
- * 
- * V44  11/xx/20 xx:xx
+ * V46  11/xx/20 xx:xx
+
+ * V45  11/04/20 17:14
+ *      REMOVED: #define FAN_SOFT_PWM
+ *      #define PREHEAT_5_LABEL         "PC" ( 295/129 )
+ *  
+ * V44  11/04/20 16:56
+ *      UPDATES: MARLING upstream bugfix-2.0.x  11/02/2020
+ *      #define FAST_PWM_FAN ( COMPILED !)
+ *      #define E0_CURRENT      800
+ *      #define E1_CURRENT      800
+ *      #define Z1_CURRENT      1000
+ *      #define Z2_CURRENT      1000
+ *      #define TEMP_BED_RESIDENCY_TIME 5  ( 10 def)
+ *      #define TEMP_RESIDENCY_TIME     5 ( 10 def )     
+ *      
  * 
  * V43  11/03/20 14:23
  *      #define BAUDRATE 250000
@@ -49,7 +63,7 @@
  *      M906 T1 E600
  *      
  * V42  11/02/20 10:04
- *      upstream updates: 11/02/2020
+ *      UPDATES: MARLING upstream bugfix-2.0.x  11/02/2020
  *      CHAMBER_FAN_MODE == 2
  *          CHAMBER_FAN_BASE  0
  *          CHAMBER_FAN_FACTOR 64
@@ -101,7 +115,7 @@
  *      #define CUSTOM_USER_MENUS  
  * 
  * V39  10/31/20 09:44
- *      upstream merges
+ *      UPDATES: MARLING upstream bugfix-2.0.x 
  * 
  *      #define HEATER_0_MAXTEMP 315
  *      #define HEATER_1_MAXTEMP 315
@@ -118,7 +132,7 @@
  * 
  * 
  * V38  10/20/28 17:06
- *      upstream merges
+ *      UPDATES: MARLING upstream bugfix-2.0.x 
  *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.375, 80.375, 400.0, 401.90, 401.90 }
  *      #define X_BED_SIZE 245
  *      #define Y_BED_SIZE 230
@@ -153,15 +167,14 @@
  * 8
  * V36  10/20/21 14:05
  * 		firmware sync of settings
- *      upstream merges
- *	
+ *      UPDATES: MARLING upstream bugfix-2.0.x 
  * V35  10/20/20 11:56
  * 		firmware sync of settings
  *		READDED: #define S_CURVE_ACCELERATION
- *      upstream merges
+ *      UPDATES: MARLING upstream bugfix-2.0.x 
  *		
  * V34  10/17/20 08:16
- *      upstream merges
+ *      UPDATES: MARLING upstream bugfix-2.0.x 
  *      CONFIGURATION_H_VERSION 020008
  *      Tag 2.0.7.2
  * 
@@ -268,7 +281,7 @@
  *      REMOVED: #define CLASSIC_JERK
  * 
  * V25  09/27/20 13:39
- *      UPDATES:    pulled latest updates from bugfix-2.0.x GIT
+ *      UPDATES: MARLING upstream bugfix-2.0.x     pulled latest updates from bugfix-2.0.x GIT
  * 
  * V24  09/27/20 13:20
  *      #define LCD_TIMEOUT_TO_STATUS 300000  ( ms == 5 mins )
