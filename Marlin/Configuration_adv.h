@@ -2786,7 +2786,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT       600
+    #define Z_CURRENT       1000
     #define Z_CURRENT_HOME  Z_CURRENT
     #define Z_MICROSTEPS     16
     #define Z_RSENSE          0.11
@@ -2795,7 +2795,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z2)
-    #define Z2_CURRENT      600
+    #define Z2_CURRENT      1000
     #define Z2_CURRENT_HOME Z2_CURRENT
     #define Z2_MICROSTEPS    16
     #define Z2_RSENSE         0.11
@@ -2822,7 +2822,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT      570
+    #define E0_CURRENT      800
     #define E0_MICROSTEPS    16
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
@@ -2830,7 +2830,7 @@
   #endif
 
   #if AXIS_IS_TMC(E1)
-    #define E1_CURRENT      570
+    #define E1_CURRENT      800
     #define E1_MICROSTEPS    16
     #define E1_RSENSE         0.11
     #define E1_CHAIN_POS     -1
@@ -4003,20 +4003,20 @@
 
 //  Defines are on Configuration.h (// Preheat Constants)
 
-  #define USER_DESC_1 "Preheat for " PREHEAT_3_LABEL
-  #define USER_GCODE_1 "M140 S" STRINGIFY(PREHEAT_3_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_3_TEMP_HOTEND)
+  #define USER_DESC_1 "Preheat for " PREHEAT_1_LABEL
+  #define USER_GCODE_1 "M140 S" STRINGIFY(PREHEAT_1_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND)
  
-  #define USER_DESC_2 "Preheat for " PREHEAT_4_LABEL
-  #define USER_GCODE_2 "M140 S" STRINGIFY(PREHEAT_4_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_4_TEMP_HOTEND)
+  #define USER_DESC_2 "Preheat for " PREHEAT_2_LABEL
+  #define USER_GCODE_2 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND)
   
-  #define USER_DESC_3 "Preheat for " PREHEAT_5_LABEL
-  #define USER_GCODE_3 "M140 S" STRINGIFY(PREHEAT_5_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_5_TEMP_HOTEND)
+  #define USER_DESC_3 "Preheat for " PREHEAT_3_LABEL
+  #define USER_GCODE_3 "M140 S" STRINGIFY(PREHEAT_3_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_3_TEMP_HOTEND)
   
-  #define USER_DESC_4 "Preheat for " PREHEAT_6_LABEL
-  #define USER_GCODE_4 "M140 S" STRINGIFY(PREHEAT_6_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_6_TEMP_HOTEND)
+  #define USER_DESC_4 "Preheat for " PREHEAT_4_LABEL
+  #define USER_GCODE_4 "M140 S" STRINGIFY(PREHEAT_4_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_4_TEMP_HOTEND)
  
-  #define USER_DESC_5 "Preheat for " PREHEAT_7_LABEL
-  #define USER_GCODE_5 "M140 S" STRINGIFY(PREHEAT_7_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_7_TEMP_HOTEND)
+  #define USER_DESC_5 "Preheat for " PREHEAT_5_LABEL
+  #define USER_GCODE_5 "M140 S" STRINGIFY(PREHEAT_5_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_5_TEMP_HOTEND)
  
 #endif
 
