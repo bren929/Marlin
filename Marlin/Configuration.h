@@ -498,11 +498,11 @@
 //#define TEMP_SENSOR_1_AS_REDUNDANT
 #define MAX_REDUNDANT_TEMP_SENSOR_DIFF 10
 
-#define TEMP_RESIDENCY_TIME     10  // (seconds) Time to wait for hotend to "settle" in M109
+#define TEMP_RESIDENCY_TIME     5  // (seconds) Time to wait for hotend to "settle" in M109
 #define TEMP_WINDOW              1  // (°C) Temperature proximity for the "temperature reached" timer
 #define TEMP_HYSTERESIS          3  // (°C) Temperature proximity considered "close enough" to the target
 
-#define TEMP_BED_RESIDENCY_TIME 10  // (seconds) Time to wait for bed to "settle" in M190
+#define TEMP_BED_RESIDENCY_TIME 5  // (seconds) Time to wait for bed to "settle" in M190
 #define TEMP_BED_WINDOW          1  // (°C) Temperature proximity for the "temperature reached" timer
 #define TEMP_BED_HYSTERESIS      3  // (°C) Temperature proximity considered "close enough" to the target
 
@@ -511,7 +511,7 @@
 // Below this temperature the heater will be switched off
 // because it probably indicates a broken thermistor wire.
 #define HEATER_0_MINTEMP   5
-#define HEATER_1_MINTEMP   5
+#define HEATER_1_MINTEMP   0
 #define HEATER_2_MINTEMP   5
 #define HEATER_3_MINTEMP   5
 #define HEATER_4_MINTEMP   5
@@ -1897,26 +1897,15 @@
 #define PREHEAT_3_TEMP_BED      55
 #define PREHEAT_3_FAN_SPEED     0 // Value from 0 to 255
 
-
-#define PREHEAT_4_LABEL         "PETG"
-#define PREHEAT_4_TEMP_HOTEND   235
-#define PREHEAT_4_TEMP_BED      70
+#define PREHEAT_4_LABEL         "HIPS"
+#define PREHEAT_4_TEMP_HOTEND   255
+#define PREHEAT_4_TEMP_BED      105
 #define PREHEAT_4_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_5_LABEL         "HIPS"
-#define PREHEAT_5_TEMP_HOTEND   255
-#define PREHEAT_5_TEMP_BED      105
+#define PREHEAT_5_LABEL         "PC"
+#define PREHEAT_5_TEMP_HOTEND   295
+#define PREHEAT_5_TEMP_BED      129
 #define PREHEAT_5_FAN_SPEED     0 // Value from 0 to 255
-
-#define PREHEAT_6_LABEL         "PC"
-#define PREHEAT_6_TEMP_HOTEND   295
-#define PREHEAT_6_TEMP_BED      120
-#define PREHEAT_6_FAN_SPEED     0 // Value from 0 to 255
-
-#define PREHEAT_7_LABEL         "NYLON"
-#define PREHEAT_7_TEMP_HOTEND   275
-#define PREHEAT_7_TEMP_BED      85
-#define PREHEAT_7_FAN_SPEED     0 // Value from 0 to 255
 
 
 
@@ -2966,13 +2955,13 @@
 //#define NUM_M106_FANS 1
 
 // Increase the FAN PWM frequency. Removes the PWM noise but increases heating in the FET/Arduino
-//#define FAST_PWM_FAN
+#define FAST_PWM_FAN
 
 
 // Use software PWM to drive the fan, as for the heaters. This uses a very low frequency
 // which is not as annoying as with the hardware PWM. On the other hand, if this frequency
 // is too low, you should also increment SOFT_PWM_SCALE.
-#define FAN_SOFT_PWM
+//#define FAN_SOFT_PWM
 
 // Incrementing this by 1 will double the software PWM frequency,
 // affecting heaters, and the fan if FAN_SOFT_PWM is enabled.
