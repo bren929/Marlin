@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "43" 
+#define COMPILE_VERSION "44" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,9 +36,18 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
  * 
- * V43  11/xx/20 xx:xx
+ * V44  11/xx/20 xx:xx
  * 
- * 
+ * V43  11/03/20 14:23
+ *      #define BAUDRATE 250000
+ *      #define WATCH_BED_TEMP_PERIOD                180 // Seconds
+ *          ^^ and a few others changed to 180
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.385, 80.385, 400.35, 401.70, 401.70 }
+ *      M906 X600 Y640 Z600
+ *      M906 I1 Z600
+ *      M906 T0 E600
+ *      M906 T1 E600
+ *      
  * V42  11/02/20 10:04
  *      upstream updates: 11/02/2020
  *      CHAMBER_FAN_MODE == 2
