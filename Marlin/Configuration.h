@@ -127,7 +127,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 115200
+#define BAUDRATE 250000
 
 // Enable the Bluetooth serial interface on AT90USB devices
 //#define BLUETOOTH
@@ -878,7 +878,7 @@
 
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 }
 // E0/E1 = BMG direct drive steppers ( pancake )  ( 402.0 normal steps )
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.37, 80.37, 400.25, 401.70, 401.70 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.385, 80.385, 400.35, 401.70, 401.70 }
 
 /**
  * Default Max Feed Rate (mm/s)
