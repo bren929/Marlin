@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "46" 
+#define COMPILE_VERSION "48" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -35,14 +35,30 @@
 
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
- * V46  11/xx/20 xx:xx
-
+ * 
+ * V48 11/xx/20 xx:xx
+ *      #define CHAMBER_FAN_FACTOR 20
+ *      
+ * V47 11/05/20 09:18
+ *      CHAMBER_FAN_MODE == 2
+ *          #define CHAMBER_FAN_BASE  0
+ *          #define CHAMBER_FAN_FACTOR 20
+ *          removed: #define XY_FREQUENCY_LIMIT 
+ *          removed: #define S_CURVE_ACCELERATION
+ * 
+ * V46  11/05/20 07:40
+ *      READD: #define FAN_SOFT_PWM -- part fan and chassis fan running at 100%
+ *      #define LIN_ADVANCE_K 0.02 
+ *      #define FAST_PWM_FAN_FREQUENCY 31400
+ *      #define CHAMBER_AUTO_FAN_TEMPERATURE    51
+ *      #define CHAMBER_AUTO_FAN_SPEED          255     
+ * 
  * V45  11/04/20 17:14
  *      REMOVED: #define FAN_SOFT_PWM
  *      #define PREHEAT_5_LABEL         "PC" ( 295/129 )
  *  
  * V44  11/04/20 16:56
- *      UPDATES: MARLING upstream bugfix-2.0.x  11/02/2020
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/02/2020
  *      #define FAST_PWM_FAN ( COMPILED !)
  *      #define E0_CURRENT      800
  *      #define E1_CURRENT      800
@@ -63,7 +79,7 @@
  *      M906 T1 E600
  *      
  * V42  11/02/20 10:04
- *      UPDATES: MARLING upstream bugfix-2.0.x  11/02/2020
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/02/2020
  *      CHAMBER_FAN_MODE == 2
  *          CHAMBER_FAN_BASE  0
  *          CHAMBER_FAN_FACTOR 64
@@ -115,7 +131,7 @@
  *      #define CUSTOM_USER_MENUS  
  * 
  * V39  10/31/20 09:44
- *      UPDATES: MARLING upstream bugfix-2.0.x 
+ *      UPDATES: MARLIN upstream bugfix-2.0.x 
  * 
  *      #define HEATER_0_MAXTEMP 315
  *      #define HEATER_1_MAXTEMP 315
@@ -132,7 +148,7 @@
  * 
  * 
  * V38  10/20/28 17:06
- *      UPDATES: MARLING upstream bugfix-2.0.x 
+ *      UPDATES: MARLIN upstream bugfix-2.0.x 
  *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.375, 80.375, 400.0, 401.90, 401.90 }
  *      #define X_BED_SIZE 245
  *      #define Y_BED_SIZE 230
@@ -167,14 +183,14 @@
  * 8
  * V36  10/20/21 14:05
  * 		firmware sync of settings
- *      UPDATES: MARLING upstream bugfix-2.0.x 
+ *      UPDATES: MARLIN upstream bugfix-2.0.x 
  * V35  10/20/20 11:56
  * 		firmware sync of settings
  *		READDED: #define S_CURVE_ACCELERATION
- *      UPDATES: MARLING upstream bugfix-2.0.x 
+ *      UPDATES: MARLIN upstream bugfix-2.0.x 
  *		
  * V34  10/17/20 08:16
- *      UPDATES: MARLING upstream bugfix-2.0.x 
+ *      UPDATES: MARLIN upstream bugfix-2.0.x 
  *      CONFIGURATION_H_VERSION 020008
  *      Tag 2.0.7.2
  * 
@@ -281,7 +297,7 @@
  *      REMOVED: #define CLASSIC_JERK
  * 
  * V25  09/27/20 13:39
- *      UPDATES: MARLING upstream bugfix-2.0.x     pulled latest updates from bugfix-2.0.x GIT
+ *      UPDATES: MARLIN upstream bugfix-2.0.x     pulled latest updates from bugfix-2.0.x GIT
  * 
  * V24  09/27/20 13:20
  *      #define LCD_TIMEOUT_TO_STATUS 300000  ( ms == 5 mins )
