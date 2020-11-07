@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "48" 
+#define COMPILE_VERSION "49" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,7 +36,13 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
  * 
- * V48 11/xx/20 xx:xx
+ * V49 11/xx/20 xx:xx
+ *      #define CHAMBER_FAN_FACTOR 40
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.30, 80.30, 402.50, 399.35, 399.35 }
+
+
+ * V48 11/06/20 17:20
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/06/2020
  *      #define CHAMBER_FAN_FACTOR 20
  *      
  * V47 11/05/20 09:18
