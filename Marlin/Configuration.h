@@ -880,7 +880,7 @@
 
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 }
 // E0/E1 = BMG direct drive steppers ( pancake )  ( 402.0 normal steps )
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.385, 80.385, 400.35, 401.70, 401.70 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.30, 80.30, 402.50, 399.35, 399.35 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -916,9 +916,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  500    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   500    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          600    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  750    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   750    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
@@ -1903,7 +1903,7 @@
 #define PREHEAT_4_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_5_LABEL         "PC"
-#define PREHEAT_5_TEMP_HOTEND   295
+#define PREHEAT_5_TEMP_HOTEND   286
 #define PREHEAT_5_TEMP_BED      120
 #define PREHEAT_5_FAN_SPEED     0 // Value from 0 to 255
 
