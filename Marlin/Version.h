@@ -37,6 +37,7 @@
  * Vx  mm/dd/YY HH:mm 24HR
  * 
  * V49 11/xx/20 xx:xx
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/07/2020
  *      #define CHAMBER_FAN_FACTOR 40
  *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.30, 80.30, 402.50, 399.35, 399.35 }
 
