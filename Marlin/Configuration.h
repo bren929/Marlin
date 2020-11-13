@@ -532,7 +532,7 @@
 #define HEATER_5_MAXTEMP 275
 #define HEATER_6_MAXTEMP 275
 #define HEATER_7_MAXTEMP 275
-#define BED_MAXTEMP      150
+#define BED_MAXTEMP      160
 
 
 
@@ -560,9 +560,9 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  22.76,  32.83 }
-    #define DEFAULT_Ki_LIST {   1.95,   2.83 }
-    #define DEFAULT_Kd_LIST {   66.44, 95.09 }
+    #define DEFAULT_Kp_LIST {  33.31,  32.83 }
+    #define DEFAULT_Ki_LIST {   3.97,   2.83 }
+    #define DEFAULT_Kd_LIST {  69.82,  95.09 }
   #else
 
     //////////////////////////////////////////
@@ -571,6 +571,8 @@
     // E0 - 40w  10/20/2020
     // M301 E0 P22.76 I1.95 D66.44
     //
+    // E0 - 40w  11/13/2020
+    //  M301 E0 P33.31 I3.97 D69.82
     //////////////////////////////////////////
 	#define DEFAULT_Kp 22.76
 	#define DEFAULT_Ki 1.95
@@ -630,12 +632,13 @@
   // Stock Creality Ender 3 pro Heated Bed
   // 09/27/2020
   // M304 P177.32 I34.68 D604.47
-  //
+  // 11/13/2020
+  //  M304 P13.04 I0.07 D1725.88
   //////////////////////////////////////////
 
- #define DEFAULT_bedKp 177.32
- #define DEFAULT_bedKi 34.68
- #define DEFAULT_bedKd 604.47
+ #define DEFAULT_bedKp 13.04
+ #define DEFAULT_bedKi 0.07
+ #define DEFAULT_bedKd 1725.88
 
 
 #endif // PIDTEMPBED
@@ -880,7 +883,7 @@
  */
 
 // E0/E1 = BMG direct drive steppers ( pancake )  ( 402.0 normal steps )
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.30, 80.30, 402.50, 399.35, 399.35 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.30, 80.30, 402.50, 398.70, 398.70 }
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 500 }
 
 /**
@@ -917,9 +920,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          600    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  750    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   750    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          700    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  1000    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
@@ -1922,8 +1925,8 @@
 #define PREHEAT_4_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_5_LABEL         "PC"
-#define PREHEAT_5_TEMP_HOTEND   286
-#define PREHEAT_5_TEMP_BED      120
+#define PREHEAT_5_TEMP_HOTEND   290
+#define PREHEAT_5_TEMP_BED      128
 #define PREHEAT_5_FAN_SPEED     0 // Value from 0 to 255
 
 
