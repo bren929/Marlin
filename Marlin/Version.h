@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "49" 
+#define COMPILE_VERSION "51" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,12 +36,40 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
  * 
- * V49 11/xx/20 xx:xx
- *      UPDATES: MARLIN upstream bugfix-2.0.x  11/07/2020
+ * V51 11/12/13 11:30
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/12/2020
+ *       -- M304 P13.04 I0.07 D1725.88
+ *       -- M301 E0 P33.31 I3.97 D69.82
+ *      #define FAN_KICKSTART_TIME 300
+ *      #define CHAMBER_AUTO_FAN_TEMPERATURE 65
+ *      CHAMBER_FAN_MODE == 1    
+ *        #define CHAMBER_FAN_BASE  30  
+ *        #define CHAMBER_FAN_FACTOR 10  
+ *      #define THERMAL_PROTECTION_BED_PERIOD        300 // Seconds
+ *      #define THERMAL_PROTECTION_BED_HYSTERESIS     10 // Degrees Celsius
+ *      #define WATCH_BED_TEMP_PERIOD                420 // Seconds
+ *      #define WATCH_BED_TEMP_INCREASE               2 // Degrees Celsius
+ *           
+ * 
+ * V50 11/12/20 11:54
+ *      #define TEMP_CHAMBER_HYSTERESIS     3
+ *      #define CHAMBER_FAN_FACTOR 20
+ *      #define PREHEAT_5_LABEL         "PC"
+ *      #define PREHEAT_5_TEMP_HOTEND   290
+ *      #define PREHEAT_5_TEMP_BED      128
+ *      #define WATCH_BED_TEMP_PERIOD                300 // Seconds
+ *      #define THERMAL_PROTECTION_BED_PERIOD        60 // Seconds
+ * 
+ * 
+ * V49 11/12/20 08:38
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/12/2020
  *      #define CHAMBER_FAN_FACTOR 40
- *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.30, 80.30, 402.50, 399.35, 399.35 }
-
-
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.30, 80.30, 402.50, 398.70, 398.70 }
+ *      #define DEFAULT_ACCELERATION          700
+ *      #define DEFAULT_RETRACT_ACCELERATION  1000
+ *      #define DEFAULT_TRAVEL_ACCELERATION   1000
+ *      
+ * 
  * V48 11/06/20 17:20
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/06/2020
  *      #define CHAMBER_FAN_FACTOR 20
