@@ -184,8 +184,6 @@ cmake-build-*
 #Python
 __pycache__
 VISUAL-STUDIO_ENDER3pro-SKR-PRO-1.1.code-workspace
-<<<<<<< Updated upstream
-=======
 Marlin/Dist/Configuration.h
 Marlin/Dist/Configuration_adv.h
 Marlin/Dist/Version.h
@@ -234,4 +232,3 @@ Marlin/Version.h
 Marlin/src/pins/stm32f4/pins_BTT_SKR_PRO_common.h
 Marlin/Configuration_adv.h
 Marlin/Configuration.h
->>>>>>> Stashed changes
