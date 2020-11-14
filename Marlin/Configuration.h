@@ -501,11 +501,11 @@
 
 #define TEMP_RESIDENCY_TIME     5  // (seconds) Time to wait for hotend to "settle" in M109
 #define TEMP_WINDOW              1  // (°C) Temperature proximity for the "temperature reached" timer
-#define TEMP_HYSTERESIS          3  // (°C) Temperature proximity considered "close enough" to the target
+#define TEMP_HYSTERESIS          2  // (°C) Temperature proximity considered "close enough" to the target
 
 #define TEMP_BED_RESIDENCY_TIME 5  // (seconds) Time to wait for bed to "settle" in M190
 #define TEMP_BED_WINDOW          1  // (°C) Temperature proximity for the "temperature reached" timer
-#define TEMP_BED_HYSTERESIS      3  // (°C) Temperature proximity considered "close enough" to the target
+#define TEMP_BED_HYSTERESIS      2  // (°C) Temperature proximity considered "close enough" to the target
 
 
 
@@ -556,24 +556,21 @@
   #define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
+    //////////////////////////////////////////
+    //
+    // E3D Chimera Head ( E0 - 40W, E1 30W )
+    // E0 - 40w  11/13/2020
+    //    M301 E0 P19.49 I1.47 D64.64
+    //////////////////////////////////////////
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  33.31,  32.83 }
-    #define DEFAULT_Ki_LIST {   3.97,   2.83 }
-    #define DEFAULT_Kd_LIST {  69.82,  95.09 }
+    #define DEFAULT_Kp_LIST {  19.49,  32.83 }
+    #define DEFAULT_Ki_LIST {   1.47,   2.83 }
+    #define DEFAULT_Kd_LIST {  64.64,  95.09 }
   #else
 
-    //////////////////////////////////////////
-    //
-    // E3D Chimera Head ( E0 - 40W, E1 30W )
-    // E0 - 40w  10/20/2020
-    // M301 E0 P22.76 I1.95 D66.44
-    //
-    // E0 - 40w  11/13/2020
-    //  M301 E0 P33.31 I3.97 D69.82
-    //////////////////////////////////////////
 	#define DEFAULT_Kp 22.76
 	#define DEFAULT_Ki 1.95
 	#define DEFAULT_Kd 66.44
@@ -630,16 +627,13 @@
   //////////////////////////////////////////
   //
   // Stock Creality Ender 3 pro Heated Bed
-  // 09/27/2020
-  // M304 P177.32 I34.68 D604.47
-  // 11/13/2020
-  //  M304 P13.04 I0.07 D1725.88
+  // 11/13/2020 @ 135 C (PS voltage 25.25)
+  // M304 P101.30 I19.22 D355.92
   //////////////////////////////////////////
 
- #define DEFAULT_bedKp 13.04
- #define DEFAULT_bedKi 0.07
- #define DEFAULT_bedKd 1725.88
-
+#define DEFAULT_bedKp 101.30
+#define DEFAULT_bedKi 19.22
+#define DEFAULT_bedKd 355.92
 
 #endif // PIDTEMPBED
 
@@ -882,9 +876,11 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 
-// E0/E1 = BMG direct drive steppers ( pancake )  ( 402.0 normal steps )
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.30, 80.30, 402.50, 398.70, 398.70 }
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 500 }
+
+// E0/E1 = BMG direct drive steppers ( pancake )  ( 402.0 normal steps )
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.30, 80.30, 402.60, 398.65, 398.65 }
+
 
 /**
  * Default Max Feed Rate (mm/s)
