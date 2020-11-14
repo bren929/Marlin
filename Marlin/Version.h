@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "52" 
+#define COMPILE_VERSION "53" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,11 +36,16 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
  * 
- * V52 11/12/14 09:30
- *      UPDATES: MARLIN upstream bugfix-2.0.x  11/14/2020
+ * V53 11/12/xx xx:xx
+ * 
+ * 
+ * V52 11/12/14 09:40
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/14/2020 (SKR_PRO MOTOR_EXPANSION ?)
  *      M301 E0 P19.49 I1.47 D64.64
  *      M304 P101.30 I19.22 D355.92
- * 
+ *      M92 X80.30 Y80.30 Z402.60
+ *      M92 T0/T1 E398.65
+ *      M906 T0/T1 E640
  * 
  * V51 11/12/13 12:27
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/13/2020
