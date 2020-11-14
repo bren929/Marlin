@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "51" 
+#define COMPILE_VERSION "52" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,10 +36,16 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
  * 
- * V51 11/12/13 11:30
- *      UPDATES: MARLIN upstream bugfix-2.0.x  11/12/2020
+ * V52 11/12/14 09:30
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/14/2020
+ *      M301 E0 P19.49 I1.47 D64.64
+ *      M304 P101.30 I19.22 D355.92
+ * 
+ * 
+ * V51 11/12/13 12:27
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/13/2020
  *       -- M304 P13.04 I0.07 D1725.88
- *       -- M301 E0 P33.31 I3.97 D69.82
+ *       -- M301 E0 P19.49 I1.47 D64.64
  *      #define FAN_KICKSTART_TIME 300
  *      #define CHAMBER_AUTO_FAN_TEMPERATURE 65
  *      CHAMBER_FAN_MODE == 1    
