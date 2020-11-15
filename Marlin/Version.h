@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "54" 
+#define COMPILE_VERSION "55" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,8 +36,11 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
  * 
- * V54 11/12/15 10:52
+ * V55 11/12/xx xx:xx
+ * 
+ * V54 11/12/15 12:15
  *      UPDATED: To Python 3.9.0
+ *      MOVED: from \\MORDOR UNC to local C drive.
  *      #define CONTROLLERFAN_SPEED_ACTIVE 255 
  *      M301 E0 P16.33 I1.28 D52.26
  *      #define Z_AFTER_HOMING  5
