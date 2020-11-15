@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "53" 
+#define COMPILE_VERSION "54" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,11 +36,23 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
  * 
- * V53 11/12/15 08:35
- *      UPDATES: MARLIN upstream bugfix-2.0.x  11/14/2020
+ * V54 11/12/15 10:52
+ *      UPDATED: To Python 3.9.0
+ *      #define CONTROLLERFAN_SPEED_ACTIVE 255 
+ *      M301 E0 P16.33 I1.28 D52.26
+ *      #define Z_AFTER_HOMING  5
+ *      #define Y_BED_SIZE 235
+ *      #define Y_MAX_POS Y_BED_SIZE - 11
+ *      M92 T0 E396.80
+ * 
+ * V53 11/12/15 08:44s
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/15/2020
  *      DEFAULT_AXIS_STEPS_PER_UNIT   { 80.30, 80.30, 402.60, 397.00, 397.00 }
- * 
- * 
+ *      #define STARTUP_COMMANDS "M150 R255 U255 B255 P255"
+ *      #define PREHEAT_5_LABEL         "PC"
+ *      #define PREHEAT_5_TEMP_HOTEND   290
+ *      #define PREHEAT_5_TEMP_BED      140
+ *      
  * V52 11/12/14 09:40
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/14/2020 (SKR_PRO MOTOR_EXPANSION ?)
  *      M301 E0 P19.49 I1.47 D64.64

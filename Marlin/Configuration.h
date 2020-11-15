@@ -559,16 +559,16 @@
     //////////////////////////////////////////
     //
     // E3D Chimera Head ( E0 - 40W, E1 30W )
-    // E0 - 40w  11/13/2020
-    //    M301 E0 P19.49 I1.47 D64.64
+    // E0 - 40w  11/15/2020 PS 25.25VDC
+    //  M301 E0 P16.33 I1.28 D52.26  
     //////////////////////////////////////////
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  19.49,  32.83 }
-    #define DEFAULT_Ki_LIST {   1.47,   2.83 }
-    #define DEFAULT_Kd_LIST {  64.64,  95.09 }
+    #define DEFAULT_Kp_LIST {  16.33,  32.83 }
+    #define DEFAULT_Ki_LIST {   1.28,   2.83 }
+    #define DEFAULT_Kd_LIST {  52.26,  95.09 }
   #else
 
 	#define DEFAULT_Kp 22.76
@@ -879,7 +879,7 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 500 }
 
 // E0/E1 = BMG direct drive steppers ( pancake )  ( 402.0 normal steps )
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.30, 80.30, 402.60, 397.00, 397.00 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.30, 80.30, 402.60, 396.80, 396.80 }
 
 
 /**
@@ -1328,10 +1328,10 @@
 
 //#define UNKNOWN_Z_NO_RAISE      // Don't raise Z (lower the bed) if Z is "unknown." For beds that fall when Z is powered off.
 
-//#define Z_HOMING_HEIGHT  4      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
+#define Z_HOMING_HEIGHT  4      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
                                   // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
 
-//#define Z_AFTER_HOMING  10      // (mm) Height to move to after homing Z
+#define Z_AFTER_HOMING  5         // (mm) Height to move to after homing Z
 
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
@@ -1343,14 +1343,14 @@
 
 // The size of the print bed
 #define X_BED_SIZE 245
-#define Y_BED_SIZE 230
+#define Y_BED_SIZE 235
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
-#define Y_MAX_POS Y_BED_SIZE
+#define Y_MAX_POS Y_BED_SIZE - 11
 #define Z_MAX_POS 230
 
 
@@ -1900,7 +1900,7 @@
 
 #define PREHEAT_2_LABEL       "ABS"
 #define PREHEAT_2_TEMP_HOTEND 245
-#define PREHEAT_2_TEMP_BED    105
+#define PREHEAT_2_TEMP_BED    110
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
 
@@ -1922,7 +1922,7 @@
 
 #define PREHEAT_5_LABEL         "PC"
 #define PREHEAT_5_TEMP_HOTEND   290
-#define PREHEAT_5_TEMP_BED      128
+#define PREHEAT_5_TEMP_BED      140
 #define PREHEAT_5_FAN_SPEED     0 // Value from 0 to 255
 
 
