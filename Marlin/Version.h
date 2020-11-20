@@ -36,7 +36,21 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
  * 
- * V55 11/12/xx xx:xx
+ * V55 11/12/20 12:47   
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/20/2020
+ *      M92 X80.33 Y80.30 Z403.10
+ *      M92 T0 E396.00
+ *      M92 T1 E396.00
+ *      M204 P600.00 R600.00 T900.00
+ *      M203 T0 E750.00
+ *      M203 T1 E750.00
+ *      #define DEFAULT_ACCELERATION          600    // X, Y, Z and E acceleration for printing moves
+ *      #define DEFAULT_RETRACT_ACCELERATION  600    // E acceleration for retracts
+ *      #define DEFAULT_TRAVEL_ACCELERATION   900    // X, Y, Z acceleration for travel (non printing) moves
+ *      CASE_LIGHT_DEFAULT_BRIGHTNESS 128  
+ *      #define LIN_ADVANCE_K 0.01
+ *      #define E0_CURRENT      600
+ *      #define Eq_CURRENT      600
  * 
  * V54 11/12/15 12:15
  *      UPDATED: To Python 3.9.0
