@@ -139,8 +139,8 @@
 //
 #if TEMP_SENSOR_CHAMBER
   #define CHAMBER_MINTEMP             5
-  #define CHAMBER_MAXTEMP            65
-  #define TEMP_CHAMBER_HYSTERESIS     2   // (°C) Temperature proximity considered "close enough" to the target
+  #define CHAMBER_MAXTEMP            66
+  #define TEMP_CHAMBER_HYSTERESIS     5   // (°C) Temperature proximity considered "close enough" to the target
   #define CHAMBER_LIMIT_SWITCHING
   #define HEATER_CHAMBER_PIN       PF9   // Chamber heater on/off pin
   #define HEATER_CHAMBER_INVERTING true
@@ -148,7 +148,7 @@
   #define CHAMBER_FAN               // Enable a fan on the chamber
   #if ENABLED(CHAMBER_FAN)
 
-    #define CHAMBER_FAN_MODE 1        // Fan control mode: 0=Static; 1=Linear increase when temp is higher than target; 2=V-shaped curve.
+    #define CHAMBER_FAN_MODE 2        // Fan control mode: 0=Static; 1=Linear increase when temp is higher than target; 2=V-shaped curve.
 
     #if CHAMBER_FAN_MODE == 0
       #define CHAMBER_FAN_BASE  255   // Chamber fan PWM (0-255)
@@ -597,7 +597,7 @@
 #define EXTRUDER_AUTO_FAN_TEMPERATURE 40
 #define EXTRUDER_AUTO_FAN_SPEED 255  
 
-#define CHAMBER_AUTO_FAN_TEMPERATURE 65
+#define CHAMBER_AUTO_FAN_TEMPERATURE 60
 #define CHAMBER_AUTO_FAN_SPEED 255
 
 
@@ -632,7 +632,7 @@
   #define CASE_LIGHT_PIN            SERVO1_PIN                 // Override the default pin if needed
   #define INVERT_CASE_LIGHT false             // Set true if Case Light is ON when pin is LOW
   #define CASE_LIGHT_DEFAULT_ON true          // Set default power-up state on
-  #define CASE_LIGHT_DEFAULT_BRIGHTNESS 128   // Set default power-up brightness (0-255, requires PWM pin)
+  #define CASE_LIGHT_DEFAULT_BRIGHTNESS 255   // Set default power-up brightness (0-255, requires PWM pin)
   //#define CASE_LIGHT_MAX_PWM 128            // Limit pwm
   #define CASE_LIGHT_MENU                   // Add Case Light options to the LCD menu
   //#define CASE_LIGHT_NO_BRIGHTNESS          // Disable brightness control. Enable for non-PWM lighting.
@@ -2849,7 +2849,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT      680
+    #define E0_CURRENT      700
     #define E0_MICROSTEPS    16
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
@@ -2857,7 +2857,7 @@
   #endif
 
   #if AXIS_IS_TMC(E1)
-    #define E1_CURRENT      680
+    #define E1_CURRENT      700
     #define E1_MICROSTEPS    16
     #define E1_RSENSE         0.11
     #define E1_CHAIN_POS     -1
@@ -2986,7 +2986,7 @@
    */
   #define STEALTHCHOP_XY
   #define STEALTHCHOP_Z
-  #define STEALTHCHOP_E
+  //#define STEALTHCHOP_E
 
   /**
    * Optimize spreadCycle chopper parameters by using predefined parameter sets

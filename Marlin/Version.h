@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "56" 
+#define COMPILE_VERSION "57" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,12 +36,16 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
  * 
- * V57 11/12/xx xx:xx 
- *  
- *   
+ * V57 11/12/22 09:45 
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/22/2020
+ *      M204 P400.00 R400.00 T500.00
+ *      M906 T0 / T1 E700
+ *      S_CURVE_ACCELERATION
+ *      //#define STEALTHCHOP_E
+ *      CHAMBER_AUTO_FAN_TEMPERATURE 60
+ * 
  * V56 11/12/21 08:10   
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/21/2020
- *      M92 X80.33 Y80.30 Z403.10
  *      M906 T0 / T1 E680
  * 
  * V55 11/12/20 12:47   
@@ -137,7 +141,7 @@
  *      #define FAST_PWM_FAN_FREQUENCY 31400
  *      #define CHAMBER_AUTO_FAN_TEMPERATURE    51
  *      #define CHAMBER_AUTO_FAN_SPEED          255     
- * 
+ *      
  * V45  11/04/20 17:14
  *      REMOVED: #define FAN_SOFT_PWM
  *      #define PREHEAT_5_LABEL         "PC" ( 295/129 )
