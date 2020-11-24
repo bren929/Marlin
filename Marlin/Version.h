@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "57" 
+#define COMPILE_VERSION "58" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,7 +36,9 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
  * 
- * V57 11/12/22 09:45 
+ * V58 11/12/xx xx:xx 
+ * 
+ * V57 11/12/22 09:43 
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/22/2020
  *      M204 P400.00 R400.00 T500.00
  *      M906 T0 / T1 E700
