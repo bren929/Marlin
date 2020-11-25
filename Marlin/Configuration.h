@@ -1925,8 +1925,8 @@
 #define PREHEAT_4_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_5_LABEL         "PC"
-#define PREHEAT_5_TEMP_HOTEND   290
-#define PREHEAT_5_TEMP_BED      140
+#define PREHEAT_5_TEMP_HOTEND   285
+#define PREHEAT_5_TEMP_BED      132
 #define PREHEAT_5_FAN_SPEED     0 // Value from 0 to 255
 
 

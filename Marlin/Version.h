@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "58" 
+#define COMPILE_VERSION "59" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,7 +36,13 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:mm 24HR
  * 
- * V58 11/12/xx xx:xx 
+ * V59 11/12/xx xx:xx 
+ * 
+ * 
+ * V58 11/12/25 15:23 
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/25/2020
+ *      #define NEO_PIN                             PF8  - blown 5v buck converter - PC9 doesnt work now
+ *      removed: //#define HOMING_BACKOFF_POST_MM
  * 
  * V57 11/12/22 09:43 
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/22/2020
