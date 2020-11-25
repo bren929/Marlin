@@ -3083,7 +3083,8 @@
 
 
 
-#define NEO_PIN             PC9   // PWM for neo-pixel lights in chamber
+//#define NEO_PIN             PC9   // PWM for neo-pixel lights in chamber
+#define NEO_PIN             PF8   // PWM for neo-pixel lights in chamber
 
 // Support for Adafruit NeoPixel LED driver
 #define NEOPIXEL_LED

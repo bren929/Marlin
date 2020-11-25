@@ -279,7 +279,7 @@
 
 // Extension-1 Header
 //#define NEO_PIN                             PC9   // 1-2 PWM for neo-pixel lights in chamber - died 11/25/2020 blown buck converter
-#define NEO_PIN                             PF8   // 1-2 PWM for neo-pixel lights in chamber
+// ^^ defined in configuration.h **
 
 #ifndef HEATER_CHAMBER_PIN
   #define HEATER_CHAMBER_PIN                PF9   // Chamber heater on/off pin

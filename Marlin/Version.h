@@ -34,17 +34,17 @@
 #define MACHINE_NAME "JAM-ENG Ender3pro"
 
 /*******************************************************************************************************
- * Vx  mm/dd/YY HH:mm 24HR
+ * Vx  mm/dd/YYYY HH:mm 24HR
  * 
- * V59 11/12/xx xx:xx 
+ * V59 11/xx/2020 xx:xx 
  * 
  * 
- * V58 11/12/25 15:23 
+ * V58 11/25/2020 15:51 
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/25/2020
  *      #define NEO_PIN                             PF8  - blown 5v buck converter - PC9 doesnt work now
  *      removed: //#define HOMING_BACKOFF_POST_MM
  * 
- * V57 11/12/22 09:43 
+ * V57 11/22/2020 09:43 
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/22/2020
  *      M204 P400.00 R400.00 T500.00
  *      M906 T0 / T1 E700
@@ -52,11 +52,11 @@
  *      //#define STEALTHCHOP_E
  *      CHAMBER_AUTO_FAN_TEMPERATURE 60
  * 
- * V56 11/12/21 08:10   
+ * V56 11/21/2020 08:10   
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/21/2020
  *      M906 T0 / T1 E680
  * 
- * V55 11/12/20 12:47   
+ * V55 11/12/2020 12:47   
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/20/2020
  *      M92 X80.33 Y80.30 Z403.10
  *      M92 T0 E396.00
@@ -72,7 +72,7 @@
  *      #define E0_CURRENT      600
  *      #define Eq_CURRENT      600
  * 
- * V54 11/12/15 12:15
+ * V54 11/15/2020 12:15
  *      UPDATED: To Python 3.9.0
  *      MOVED: from \\MORDOR UNC to local C drive.
  *      #define CONTROLLERFAN_SPEED_ACTIVE 255 
@@ -82,7 +82,7 @@
  *      #define Y_MAX_POS Y_BED_SIZE - 11
  *      M92 T0 E396.80
  * 
- * V53 11/12/15 08:44s
+ * V53 11/15/2020 08:44s
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/15/2020
  *      DEFAULT_AXIS_STEPS_PER_UNIT   { 80.30, 80.30, 402.60, 397.00, 397.00 }
  *      #define STARTUP_COMMANDS "M150 R255 U255 B255 P255"
@@ -90,7 +90,7 @@
  *      #define PREHEAT_5_TEMP_HOTEND   290
  *      #define PREHEAT_5_TEMP_BED      140
  *      
- * V52 11/12/14 09:40
+ * V52 11/14/2020 09:40
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/14/2020 (SKR_PRO MOTOR_EXPANSION ?)
  *      M301 E0 P19.49 I1.47 D64.64
  *      M304 P101.30 I19.22 D355.92
@@ -98,7 +98,7 @@
  *      M92 T0/T1 E398.65
  *      M906 T0/T1 E640
  * 
- * V51 11/12/13 12:27
+ * V51 11/13/2020 12:27
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/13/2020
  *       -- M304 P13.04 I0.07 D1725.88
  *       -- M301 E0 P19.49 I1.47 D64.64
@@ -113,7 +113,7 @@
  *      #define WATCH_BED_TEMP_INCREASE               2 // Degrees Celsius
  *           
  * 
- * V50 11/12/20 11:54
+ * V50 11/12/2020 11:54
  *      #define TEMP_CHAMBER_HYSTERESIS     3
  *      #define CHAMBER_FAN_FACTOR 20
  *      #define PREHEAT_5_LABEL         "PC"
@@ -123,7 +123,7 @@
  *      #define THERMAL_PROTECTION_BED_PERIOD        60 // Seconds
  * 
  * 
- * V49 11/12/20 08:38
+ * V49 11/12/2020 08:38
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/12/2020
  *      #define CHAMBER_FAN_FACTOR 40
  *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.30, 80.30, 402.50, 398.70, 398.70 }
@@ -132,29 +132,29 @@
  *      #define DEFAULT_TRAVEL_ACCELERATION   1000
  *      
  * 
- * V48 11/06/20 17:20
+ * V48 11/06/2020 17:20
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/06/2020
  *      #define CHAMBER_FAN_FACTOR 20
  *      
- * V47 11/05/20 09:18
+ * V47 11/05/2020 09:18
  *      CHAMBER_FAN_MODE == 2
  *          #define CHAMBER_FAN_BASE  0
  *          #define CHAMBER_FAN_FACTOR 20
  *          removed: #define XY_FREQUENCY_LIMIT 
  *          removed: #define S_CURVE_ACCELERATION
  * 
- * V46  11/05/20 07:40
+ * V46  11/05/2020 07:40
  *      READD: #define FAN_SOFT_PWM -- part fan and chassis fan running at 100%
  *      #define LIN_ADVANCE_K 0.02 
  *      #define FAST_PWM_FAN_FREQUENCY 31400
  *      #define CHAMBER_AUTO_FAN_TEMPERATURE    51
  *      #define CHAMBER_AUTO_FAN_SPEED          255     
  *      
- * V45  11/04/20 17:14
+ * V45  11/04/2020 17:14
  *      REMOVED: #define FAN_SOFT_PWM
  *      #define PREHEAT_5_LABEL         "PC" ( 295/129 )
  *  
- * V44  11/04/20 16:56
+ * V44  11/04/2020 16:56
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/02/2020
  *      #define FAST_PWM_FAN ( COMPILED !)
  *      #define E0_CURRENT      800
@@ -165,7 +165,7 @@
  *      #define TEMP_RESIDENCY_TIME     5 ( 10 def )     
  *      
  * 
- * V43  11/03/20 14:23
+ * V43  11/03/2020 14:23
  *      #define BAUDRATE 250000
  *      #define WATCH_BED_TEMP_PERIOD                180 // Seconds
  *          ^^ and a few others changed to 180
@@ -175,7 +175,7 @@
  *      M906 T0 E600
  *      M906 T1 E600
  *      
- * V42  11/02/20 10:04
+ * V42  11/02/2020 10:04
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/02/2020
  *      CHAMBER_FAN_MODE == 2
  *          CHAMBER_FAN_BASE  0
