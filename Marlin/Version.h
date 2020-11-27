@@ -36,12 +36,12 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:mm 24HR
  * 
- * V59 11/xx/2020 xx:xx 
- * 
+ * V59 11/26/2020 17:35 
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/26/2020
  * 
  * V58 11/25/2020 15:51 
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/25/2020
- *      #define NEO_PIN                             PF8  - blown 5v buck converter - PC9 doesnt work now
+ *      #define NEO_PIN                             PF8  - blown 5v buck converter - PC9 may be ok though
  *      removed: //#define HOMING_BACKOFF_POST_MM
  * 
  * V57 11/22/2020 09:43 
