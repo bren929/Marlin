@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "60" 
+#define COMPILE_VERSION "61" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -38,7 +38,7 @@
  * 
  * V61 11/xx/2020 xx:xx 
  * 
- * V60 11/27/2020 08:30 
+ * V60 11/27/2020 12:31 
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/26/2020
  *      #define NEO_PIN                             PC9
  *      Dual Z Stepper Driver setup. 2nd Z uses E2 port. Make sure Primary Z "Buddy" Port is Jumped.
