@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "62" 
+#define COMPILE_VERSION "63" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,9 +36,16 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:mm 24HR
  * 
- * V62 11/xx/2020 xx:xx 
- *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 400.00, 400.00, 400.00 }
- *      #define LIN_ADVANCE_K 0.03
+ * V63 11/xx/2020 xx:xx 
+ * 
+ * 
+ * V62 11/29/2020 09:06 
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/29/2020
+ *      #define X_MICROSTEPS     256  // ( x, y, z1,z z2, e0, e1 ) ** need to multiple STEPS * 16
+ *      *!* @ 256 STEPS == #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1280.00, 1280.00, 6400.00, 6384.00, 6384.00 }
+ *      *!* @ 16 STEPS == #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 400.00, 399.00, 399.00 }
+
+ *      #define LIN_ADVANCE_K 0.06
  * 
  * V61 11/28/2020 10:50
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/26/2020
