@@ -632,7 +632,7 @@
   #define CASE_LIGHT_PIN            SERVO1_PIN                 // Override the default pin if needed
   #define INVERT_CASE_LIGHT false             // Set true if Case Light is ON when pin is LOW
   #define CASE_LIGHT_DEFAULT_ON true          // Set default power-up state on
-  #define CASE_LIGHT_DEFAULT_BRIGHTNESS 255   // Set default power-up brightness (0-255, requires PWM pin)
+  #define CASE_LIGHT_DEFAULT_BRIGHTNESS 128   // Set default power-up brightness (0-255, requires PWM pin)
   //#define CASE_LIGHT_MAX_PWM 128            // Limit pwm
   #define CASE_LIGHT_MENU                   // Add Case Light options to the LCD menu
   //#define CASE_LIGHT_NO_BRIGHTNESS          // Disable brightness control. Enable for non-PWM lighting.
@@ -2030,10 +2030,10 @@
  *
  * See https://marlinfw.org/docs/features/lin_advance.html for full instructions.
  */
-//#define LIN_ADVANCE
+#define LIN_ADVANCE
 #if ENABLED(LIN_ADVANCE)
   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
-  #define LIN_ADVANCE_K 0.00    // Unit: mm compression per 1mm/s extruder speed
+  #define LIN_ADVANCE_K 0.03    // Unit: mm compression per 1mm/s extruder speed
   //#define LA_DEBUG            // If enabled, this will generate debug information output over USB.
   #define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
 #endif
@@ -2247,8 +2247,8 @@
  * less step aliasing by calculating all motions in advance.
  * Preparing your G-code: https://github.com/colinrgodsey/step-daemon
  */
-#define DIRECT_STEPPING
-
+//#define DIRECT_STEPPING
+// NOTE: DIRECT_STEPPING is incompatible with LIN_ADVANCE. Enable in external planner if possible.
 
 
 
