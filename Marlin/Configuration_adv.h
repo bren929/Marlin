@@ -2033,7 +2033,7 @@
 #define LIN_ADVANCE
 #if ENABLED(LIN_ADVANCE)
   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
-  #define LIN_ADVANCE_K 0.06    // Unit: mm compression per 1mm/s extruder speed
+  #define LIN_ADVANCE_K 0.04    // Unit: mm compression per 1mm/s extruder speed
   //#define LA_DEBUG            // If enabled, this will generate debug information output over USB.
   #define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
 #endif
@@ -2790,7 +2790,7 @@
   #endif
 
   #if AXIS_IS_TMC(Y)
-     #define Y_CURRENT       600
+     #define Y_CURRENT       700
     #define Y_CURRENT_HOME  (Y_CURRENT/2)
     #define Y_MICROSTEPS     256
     #define Y_RSENSE          0.11
@@ -2844,7 +2844,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT      650
+    #define E0_CURRENT      700
     #define E0_MICROSTEPS    256
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
@@ -2852,7 +2852,7 @@
   #endif
 
   #if AXIS_IS_TMC(E1)
-    #define E1_CURRENT      650
+    #define E1_CURRENT      700
     #define E1_MICROSTEPS    256
     #define E1_RSENSE         0.11
     #define E1_CHAIN_POS     -1
@@ -4026,19 +4026,19 @@
 
 //  Defines are on Configuration.h (// Preheat Constants)
 
-  #define USER_DESC_1 "Preheat for " PREHEAT_1_LABEL
+  #define USER_DESC_1 "Preheat " PREHEAT_1_LABEL
   #define USER_GCODE_1 "M140 S" STRINGIFY(PREHEAT_1_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND)
  
-  #define USER_DESC_2 "Preheat for " PREHEAT_2_LABEL
+  #define USER_DESC_2 "Preheat " PREHEAT_2_LABEL
   #define USER_GCODE_2 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND)
   
-  #define USER_DESC_3 "Preheat for " PREHEAT_3_LABEL
+  #define USER_DESC_3 "Preheat " PREHEAT_3_LABEL
   #define USER_GCODE_3 "M140 S" STRINGIFY(PREHEAT_3_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_3_TEMP_HOTEND)
   
-  #define USER_DESC_4 "Preheat for " PREHEAT_4_LABEL
+  #define USER_DESC_4 "Preheat " PREHEAT_4_LABEL
   #define USER_GCODE_4 "M140 S" STRINGIFY(PREHEAT_4_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_4_TEMP_HOTEND)
  
-  #define USER_DESC_5 "Preheat for " PREHEAT_5_LABEL
+  #define USER_DESC_5 "Preheat " PREHEAT_5_LABEL
   #define USER_GCODE_5 "M140 S" STRINGIFY(PREHEAT_5_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_5_TEMP_HOTEND)
  
 #endif

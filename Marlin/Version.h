@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "63" 
+#define COMPILE_VERSION "64" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -35,10 +35,14 @@
 
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:mm 24HR
+
+ * V63 12/xx/2020 xx:xx 
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  12/xx/2020
  * 
- * V63 11/31/2020 xx:xx 
- *      UPDATES: MARLIN upstream bugfix-2.0.x  11/31/2020
- *      Temperature settings, adjusting extruder steps ( flow )
+ * V63 12/01/2020 13:37 
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  12/01/2020
+ *      Temperature settings, adjusting extruder steps ( flow ), sync printer settings to firmware defaults.
+ *      #define LIN_ADVANCE_K 0.04 
  * 
  * V62 11/29/2020 09:06 
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/29/2020
