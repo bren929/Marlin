@@ -36,8 +36,9 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:mm 24HR
  * 
- * V63 11/xx/2020 xx:xx 
- * 
+ * V63 11/31/2020 xx:xx 
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/31/2020
+ *      Temperature settings, adjusting extruder steps ( flow )
  * 
  * V62 11/29/2020 09:06 
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/29/2020

@@ -868,7 +868,7 @@
 
 // E0/E1 = BMG direct drive steppers ( pancake )  ( 400.0 normal steps )
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 400.00, 399.00, 399.00 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1280.00, 1280.00, 6400.00, 6384.00, 6384.00 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1280.00, 1280.00, 6400.00, 6355.00, 6355.00 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1903,9 +1903,9 @@
 
 
 // Preheat Constants
-#define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 205
-#define PREHEAT_1_TEMP_BED     55
+#define PREHEAT_1_LABEL       "PLA-PRO"
+#define PREHEAT_1_TEMP_HOTEND 195
+#define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
@@ -1920,9 +1920,9 @@
       #define CUSTOM_USER_MENUS
  */
 
-#define PREHEAT_3_LABEL         "PLA PRO-3"
-#define PREHEAT_3_TEMP_HOTEND   205
-#define PREHEAT_3_TEMP_BED      55
+#define PREHEAT_3_LABEL         "NYLON"
+#define PREHEAT_3_TEMP_HOTEND   285
+#define PREHEAT_3_TEMP_BED      132
 #define PREHEAT_3_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_4_LABEL         "HIPS"
