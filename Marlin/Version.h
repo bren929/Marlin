@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "64" 
+#define COMPILE_VERSION "65" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -35,10 +35,37 @@
 
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:mm 24HR
-
- * V63 12/xx/2020 xx:xx 
- *      UPDATES: MARLIN upstream bugfix-2.0.x  12/xx/2020
  * 
+ * V65 12/xx/2020 xx:xx 
+ * 
+ * V64 12/07/2020 18:42 
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  12/07/2020
+ *      NEW: Case lights, NEO PIXELS (135 LEDS in 3 rows: 144pixels/meter)
+ *      #define NEOPIXEL_PIXELS     135
+ * 
+ *      M92 X1282.00 Y1282.00 Z6451.00
+ *      M203 X150.00 Y150.00 Z12.00
+ *      M203 T0 E350.00
+ *      M203 T1 E100.00
+ * 
+ *      M201 X1000.00 Y1000.00 Z100.00     
+ *      M201 T0 E5000.00
+ *      M201 T1 E5000.00
+ * 
+ *      M204 P750.00 R300.00 T750.00
+ *      M205 B20000.00 S0.00 T0.00 J0.08
+ * 
+ *      M906 X500 Y500 Z540
+ *      M906 I1 Z540
+ *      M906 T0 E700
+ *      M906 T1 E700      
+ *  
+ *      M145 S0 H195 B55 F0
+ *      M145 S1 H245 B110 F0
+ *      M145 S2 H285 B132 F0
+ *      M145 S3 H255 B105 F0
+ *      M145 S4 H270 B130 F0
+
  * V63 12/01/2020 13:37 
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/01/2020
  *      Temperature settings, adjusting extruder steps ( flow ), sync printer settings to firmware defaults.
