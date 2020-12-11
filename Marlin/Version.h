@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "65" 
+#define COMPILE_VERSION "67" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -35,6 +35,11 @@
 
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:mm 24HR
+ * 
+ * V67 12/xx/2020 xx:xx 
+ * 
+ * V66 12/11/2020 10:31 
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  12/11/2020
  * 
  * V65 12/08/2020 08:28 
  *      #define NEO_PIN             PF8     // ( PC9 Blown 12/07/2020 )
