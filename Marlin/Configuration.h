@@ -868,7 +868,7 @@
 
 // E0/E1 = BMG direct drive steppers ( pancake )  ( 400.0 normal steps )
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 400.00, 399.00, 399.00 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1282.00, 1282.00, 6451.00, 6225.00, 6225.00 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1282.00, 1282.00, 6460.00, 6225.00, 6225.00 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -904,9 +904,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          750    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  450    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   750    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          650    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  650    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   650    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
