@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "67" 
+#define COMPILE_VERSION "69" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -35,8 +35,16 @@
 
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:mm 24HR
- 
- * V68 12/xx/2020 xx:xx
+
+ * V68 12/16/2020 13:50
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  12/16/2020
+ * 
+ * V68 12/15/2020 16:04
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  12/15/2020
+ *      CAZE_FAN: narrow the 'close enough' setting.
+ *      #define TEMP_CHAMBER_HYSTERESIS     1  
+ *      ENABLED(LED_COLOR_PRESETS)
+ *      REMOVED: //#define S_CURVE_ACCELERATION
  * 
  * V67 12/13/2020 17:24
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/11/2020
