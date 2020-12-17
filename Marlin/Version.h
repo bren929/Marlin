@@ -36,12 +36,19 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:mm 24HR
 
- * V68 12/16/2020 13:50
+ * V69 12/16/2020 16:51
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/16/2020
+ *      #define XY_FREQUENCY_LIMIT      10 
+ *      REMOVED: //#define AUTOTEMP, and //#define LIN_ADVANCE
+ *      #define DIRECT_STEPPING
+ *      #define FAN_SOFT_PWM
+ *      #define SOFT_PWM_SCALE 1
+ *      #define SOFT_PWM_DITHER
+ *      #define FAN2_PIN                              PG11   // Fan2 CHAMBER COOLING FAN       CHAMBER_AUTO_FAN_PIN (WAS PC4)
  * 
  * V68 12/15/2020 16:04
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/15/2020
- *      CAZE_FAN: narrow the 'close enough' setting.
+ *      CASE_FAN: narrow the 'close enough' setting.
  *      #define TEMP_CHAMBER_HYSTERESIS     1  
  *      ENABLED(LED_COLOR_PRESETS)
  *      REMOVED: //#define S_CURVE_ACCELERATION

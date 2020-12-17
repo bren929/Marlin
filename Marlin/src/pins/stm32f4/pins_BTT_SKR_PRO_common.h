@@ -284,8 +284,9 @@
 #ifndef HEATER_CHAMBER_PIN
   #define HEATER_CHAMBER_PIN                PF9   // Chamber heater on/off pin
 #endif
-#define FAN2_PIN                            PC4   // Fan2       CHAMBER_AUTO_FAN_PIN
 
+//#define FAN2_PIN                            PC4     // Fan2       CHAMBER_AUTO_FAN_PIN ( bad 12/16/2020 ?)
+#define FAN2_PIN                              PG11   // Fan2       CHAMBER_AUTO_FAN_PIN ( bad 12/16/2020 ?)
 
 
 // Extension-2 Header
