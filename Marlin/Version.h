@@ -36,9 +36,21 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:mm 24HR
 
- * V70 12/17/2020 xx:xx
+ * V71 12/xx/2020 xx:xx
+ * 
+ * V70 12/17/2020 10:53
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/16/2020
- *      
+ *      #define HOMING_FEEDRATE_MM_M { (75*60), (75*60), (7*60) }
+ *      Disabled Stealth Chop on E0 and E1
+ *      Stepper Current: 
+ *          M906 X580 Y580 Z600
+ *          M906 I1 Z600
+ *          M906 T0 E600
+ *          M906 T1 E600
+ *      CHAMBER_FAN_MODE == 1
+ *       #define CHAMBER_FAN_BASE    0     // Base chamber fan PWM (0-255); turns on when chamber temperature is above the target
+ *       #define CHAMBER_FAN_FACTOR  20    // PWM increase per °C above target
+
  * V69 12/16/2020 16:51
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/16/2020
  *      #define XY_FREQUENCY_LIMIT      10 

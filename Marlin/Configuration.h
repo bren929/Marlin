@@ -1944,8 +1944,8 @@
  */
 
 #define PREHEAT_3_LABEL         "NYLON"
-#define PREHEAT_3_TEMP_HOTEND   250
-#define PREHEAT_3_TEMP_BED      132
+#define PREHEAT_3_TEMP_HOTEND   275
+#define PREHEAT_3_TEMP_BED      135
 #define PREHEAT_3_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_4_LABEL         "HIPS"
