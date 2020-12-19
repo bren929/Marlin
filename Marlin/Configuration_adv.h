@@ -640,13 +640,13 @@
   #define CASE_LIGHT_PIN                  SERVO1_PIN  // Override the default pin if needed
   #define INVERT_CASE_LIGHT               false       // Set true if Case Light is ON when pin is LOW
   #define CASE_LIGHT_DEFAULT_ON           true        // Set default power-up state on
-  #define CASE_LIGHT_DEFAULT_BRIGHTNESS   64          // Set default power-up brightness (0-255, requires PWM pin)
+  #define CASE_LIGHT_DEFAULT_BRIGHTNESS   255          // Set default power-up brightness (0-255, requires PWM pin)
   //#define CASE_LIGHT_MAX_PWM 128                    // Limit pwm
   #define CASE_LIGHT_MENU                             // Add Case Light options to the LCD menu
   //#define CASE_LIGHT_NO_BRIGHTNESS                  // Disable brightness control. Enable for non-PWM lighting.
   //#define CASE_LIGHT_USE_NEOPIXEL                   // Use NeoPixel LED as case light, requires NEOPIXEL_LED.
   #if ENABLED(CASE_LIGHT_USE_NEOPIXEL)
-    #define CASE_LIGHT_NEOPIXEL_COLOR { 255, 255, 255, 255 } // { Red, Green, Blue, White }
+    #define CASE_LIGHT_NEOPIXEL_COLOR { 255, 255, 255, 0 } // { Red, Green, Blue, White }
   #endif
 #endif
 
@@ -1442,7 +1442,7 @@
 
 
   // Add a mute option to the LCD menu
-  //#define SOUND_MENU_ITEM
+  #define SOUND_MENU_ITEM
 
 
 
@@ -2492,7 +2492,7 @@
 // For debug-echo: 128 bytes for the optimal speed.
 // Other output doesn't need to be that speedy.
 // :[0, 2, 4, 8, 16, 32, 64, 128, 256]
-#define TX_BUFFER_SIZE 0
+#define TX_BUFFER_SIZE 4
 
 // Host Receive Buffer Size
 // Without XON/XOFF flow control (see SERIAL_XON_XOFF below) 32 bytes should be enough.
@@ -2872,8 +2872,7 @@
  */
 #if HAS_TRINAMIC_CONFIG
 
- // #define HOLD_MULTIPLIER    0.5  // Scales down the holding current from run current
-#define HOLD_MULTIPLIER    .75  // Scales down the holding current from run current
+#define HOLD_MULTIPLIER    0.5  // Scales down the holding current from run current
 
   /**
    * Interpolate microsteps to 256
