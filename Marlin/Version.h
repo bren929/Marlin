@@ -37,12 +37,12 @@
  * Vx  mm/dd/YYYY HH:mm 24HR
 
  * V72 12/xx/2020 xx:xx
-
- * V71 12/20/2020 09:31
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  12/20/2020
+ * 
+ * V71 12/20/2020 09:39
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/20/2020
  *      DISABLED: //#define THERMAL_PROTECTION_CHAMBER
  *      ADDED: #define SOUND_MENU_ITEM ( re-enable when heater unit temp sensor removed (disables at 150F))
- *      
  * 
  * V70 12/17/2020 10:53
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/16/2020
