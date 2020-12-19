@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "70" 
+#define COMPILE_VERSION "71" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -37,6 +37,8 @@
  * Vx  mm/dd/YYYY HH:mm 24HR
 
  * V71 12/xx/2020 xx:xx
+ *      
+ *      DISABLED: //#define THERMAL_PROTECTION_CHAMBER
  * 
  * V70 12/17/2020 10:53
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/16/2020
