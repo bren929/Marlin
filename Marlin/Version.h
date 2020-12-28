@@ -694,6 +694,7 @@
  * Marlin repository.
  */
 #define SOURCE_CODE_URL "https://github.com/MarlinFirmware/Marlin"
+//#define SOURCE_CODE_URL "github.com/MarlinFirmware/Marlin"
 
 /**
  * Default generic printer UUID.
@@ -705,6 +706,7 @@
  * documentation about a specific Marlin release.
  */
 #define WEBSITE_URL "http://marlinfw.org"
+//#define WEBSITE_URL "marlinfw.org"
 
 /**
  * Set the vendor info the serial USB interface, if changable
