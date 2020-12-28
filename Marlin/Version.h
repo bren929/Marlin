@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "71" 
+#define COMPILE_VERSION "72" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,11 +36,13 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:mm 24HR
 
- * V72 12/xx/2020 xx:xx
+ * V72 12/20/2020 xx:xx
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/20/2020
- * 
- * V71 12/20/2020 09:39
- *      UPDATES: MARLIN upstream bugfix-2.0.x  12/20/2020
+ *      
+ *      
+ *      
+ * V71 12/19/2020 09:39
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  12/19/2020
  *      DISABLED: //#define THERMAL_PROTECTION_CHAMBER
  *      ADDED: #define SOUND_MENU_ITEM ( re-enable when heater unit temp sensor removed (disables at 150F))
  * 
