@@ -35,12 +35,22 @@
 
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:mm 24HR
-
- * V72 12/20/2020 xx:xx
+ * 
+ * V72 12/20/2020 09:09
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/20/2020
- *      
- *      
- *      
+ *      RE-ENABLED: //#define THERMAL_PROTECTION_CHAMBER
+ *      #define HOMING_FEEDRATE_MM_M { (785*60), (85*60), (8*60) }
+ *      Stepper Current: 
+ *          M906 X600 Y620 Z620
+ *          M906 I1 Z620
+ *          M906 T0 E620
+ *          M906 T1 E620
+ *      #define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves
+ *      #define DEFAULT_RETRACT_ACCELERATION  500    // E acceleration for retracts
+ *      #define DEFAULT_TRAVEL_ACCELERATION   650    // X, Y, Z acceleration for travel (non printing) moves
+ *      #define BACKLASH_COMPENSATION
+ *      REMOVED: #define DIRECT_STEPPING
+ * 
  * V71 12/19/2020 09:39
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/19/2020
  *      DISABLED: //#define THERMAL_PROTECTION_CHAMBER
@@ -693,8 +703,7 @@
  * has a distinct Github fork— the Source Code URL should just be the main
  * Marlin repository.
  */
-#define SOURCE_CODE_URL "https://github.com/MarlinFirmware/Marlin"
-//#define SOURCE_CODE_URL "github.com/MarlinFirmware/Marlin"
+#define SOURCE_CODE_URL "github.com/MarlinFirmware/Marlin"
 
 /**
  * Default generic printer UUID.
@@ -705,8 +714,7 @@
  * The WEBSITE_URL is the location where users can get more information such as
  * documentation about a specific Marlin release.
  */
-#define WEBSITE_URL "http://marlinfw.org"
-//#define WEBSITE_URL "marlinfw.org"
+#define WEBSITE_URL "marlinfw.org"
 
 /**
  * Set the vendor info the serial USB interface, if changable
