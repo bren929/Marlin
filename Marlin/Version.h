@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "73" 
+#define COMPILE_VERSION "74" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,7 +36,10 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:mm 24HR
  * 
- * V73 12/28/2020 18:33
+ * V74 12/xx/2020 xx:xx
+ * 
+ * V73 12/28/2020 18:31
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  12/28/2020
  * 
  *      ** ** ** ** **
  *      ** REMOVED  **
@@ -46,7 +49,7 @@
  * 
  * 
  * V72 12/28/2020 09:08
- *      UPDATES: MARLIN upstream bugfix-2.0.x  12/20/2020
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  12/28/2020
  *      RE-ENABLED: //#define THERMAL_PROTECTION_CHAMBER
  *      #define HOMING_FEEDRATE_MM_M { (785*60), (85*60), (8*60) }
  *      Stepper Current: 
