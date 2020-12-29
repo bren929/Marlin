@@ -57,6 +57,9 @@
   #define FLASH_EEPROM_LEVELING
 #endif
 
+// USB Flash Drive support
+#define HAS_OTG_USB_HOST_SUPPORT
+
 //
 // Servos / BL-TOUCH
 //
