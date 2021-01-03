@@ -34,11 +34,12 @@
 #define MACHINE_NAME "JAM-ENG Ender3pro"
 
 /*******************************************************************************************************
- * Vx  mm/dd/YYYY HH:mm 24HR
+ * Vx  mm/03/YYYY HH:mm 24HR
  * 
- * V75 12/xx/2020 xx:xx
+ * V75 01/xx/2021 14:10
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/xx/2020
- * 
+ *      ** FIRST COMPILE OF 2021 **
+ *      ** RE-CLONED TO MORDOR **
 * 
  * V74 12/29/2020 10:55
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/29/2020
