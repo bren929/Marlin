@@ -2533,7 +2533,7 @@
 // Without XON/XOFF flow control (see SERIAL_XON_XOFF below) 32 bytes should be enough.
 // To use flow control, set this buffer size to at least 1024 bytes.
 // :[0, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048]
-#define RX_BUFFER_SIZE 32
+#define RX_BUFFER_SIZE 64
 
 #if RX_BUFFER_SIZE >= 1024
   // Enable to have the controller send XON/XOFF control characters to
@@ -3225,7 +3225,7 @@
    * STEALTHCHOP_(XY|Z|E) must be enabled to use HYBRID_THRESHOLD.
    * M913 X/Y/Z/E to live tune the setting
    */
-  #define HYBRID_THRESHOLD
+  //#define HYBRID_THRESHOLD
 
   #define X_HYBRID_THRESHOLD     130  // [mm/s]
   #define X2_HYBRID_THRESHOLD    130
@@ -3333,7 +3333,7 @@
    *
    * Values from 0..1023, -1 to disable homing phase for that axis.
    */
-  #define TMC_HOME_PHASE { 896, 896, 896 }
+ // #define TMC_HOME_PHASE { 896, 896, 896 }
 
 
 

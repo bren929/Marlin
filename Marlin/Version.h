@@ -37,10 +37,12 @@
  * 
  * Vx  mm/03/YYYY HH:mm 24HR
  * 
- * V77 01/05/2021 10:35
- *      ADDED:
- *          #define TMC_HOME_PHASE { 896, 896, 896 }
+ * V77 01/05/2021 13:06
+ *      REMOVED:
  *          #define HYBRID_THRESHOLD
+ *          #define ADVANCED_OK
+ *      CHANGED:
+ *          #define TX_BUFFER_SIZE 4
  * 
  * V76 01/05/2021 10:11  ** FIXED HOMING/HALT **
  *      ADDED:
