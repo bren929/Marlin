@@ -34,13 +34,16 @@
 #define MACHINE_NAME "JAM-ENG Ender3pro"
 
 /*******************************************************************************************************
+ * 
  * Vx  mm/03/YYYY HH:mm 24HR
  * 
- * V75 01/03/2021 15:49
- *      UPDATES: MARLIN upstream bugfix-2.0.x  01/03/2020
+ * 
+ * V75 01/04/2021 09:xx
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  01/04/2020
  *      ** FIRST COMPILE OF 2021 **
- *      ** RE-CLONED TO MORDOR **
-* 
+ *      ** CLONED SKR-Pro-V1.1 GIT TO MORDOR **
+ *      #define Z_AFTER_HOMING  5         // (mm) Height to move to after homing Z
+ * 
  * V74 12/29/2020 10:55
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/29/2020
  * 
