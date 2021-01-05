@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "74" 
+#define COMPILE_VERSION "75" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -35,6 +35,13 @@
 
 /*******************************************************************************************************
  * 
+ * Vvv MM/DD/2021 HH:MM
+ * 
+ * V75 01/05/2021 14:15
+ *      ** RESTORED to release 74 - failed updates caused homing Halts, and strange bed leveling issues. 
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  01/05/2021
+ *      READDED: #define EMERGENCY_PARSER
+ *  
  * V74 12/29/2020 10:55
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/29/2020
  * 
