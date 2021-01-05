@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "75" 
+#define COMPILE_VERSION "77" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -37,23 +37,42 @@
  * 
  * Vx  mm/03/YYYY HH:mm 24HR
  * 
+ * V77 01/05/2021 10:35  ** FIXED HOMING/HALT **
+ *      ADDED:
+ *          #define TMC_HOME_PHASE { 896, 896, 896 }
+ *          #define HYBRID_THRESHOLD
  * 
- * V75 01/05/2021 08:29
+ * V76 01/05/2021 10:11  ** FIXED HOMING/HALT **
+ *      ADDED:
+ *          #define RX_BUFFER_SIZE 32
+ *          #define SQUARE_WAVE_STEPPING
+ *          #define HOMING_FEEDRATE_MM_M { (75*60), (75*60), (7*60) }
+ * 
+ *      REMOVED:    
+ *          #define BAUD_RATE_GCODE
+ *          #define SERIAL_XON_XOFF
+ *          #define TMC_HOME_PHASE { 896, 896, 896 }
+ *          #define HYBRID_THRESHOLD
+ *  
+ * 
+ * V75 01/05/2021 08:29     !!! DOES NOT HOME - HALTS PRINTER !!!
  *      UPDATES: MARLIN upstream bugfix-2.0.x  01/05/2020
  *      ** FIRST COMPILE OF 2021 **
  *      ** CLONED SKR-Pro-V1.1 GIT TO MORDOR **
- *      #define Z_AFTER_HOMING  5         // (mm) Height to move to after homing Z
- *      RE-ADDED: EMERGENCY_PARSER
- *      REMOVED: //#define FWRETRACT
- *      #define ADVANCED_OK
- *      #define BAUD_RATE_GCODE
- *      #define RX_BUFFER_SIZE 1024
- *      #define TX_BUFFER_SIZE 32
- *      #define SERIAL_XON_XOFF
- *      REMOVED: #define BACKLASH_COMPENSATION
- *      REMOVED:   #define SQUARE_WAVE_STEPPING
- *      ADDED: #define TMC_HOME_PHASE { 896, 896, 896 }
- *      ADDED: #define HYBRID_THRESHOLD
+ *      ADDED: 
+ *          #define Z_AFTER_HOMING  5         // (mm) Height to move to after homing Z
+ *          #define EMERGENCY_PARSER
+ *          #define TMC_HOME_PHASE { 896, 896, 896 }
+ *          #define HYBRID_THRESHOLD
+ *          #define ADVANCED_OK
+ *          #define BAUD_RATE_GCODE
+ *          #define RX_BUFFER_SIZE 1024
+ *          #define TX_BUFFER_SIZE 32
+ *          #define SERIAL_XON_XOFF
+ *      REMOVED: 
+ *          #define FWRETRACT
+ *          #define BACKLASH_COMPENSATION
+ *          #define SQUARE_WAVE_STEPPING
  * 
  * V74 12/29/2020 10:55
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/29/2020
