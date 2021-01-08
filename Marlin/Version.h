@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "76" 
+#define COMPILE_VERSION "78" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,6 +36,35 @@
 /*******************************************************************************************************
  * 
  * Vvv MM/DD/2021 HH:MM
+ * 
+ * V78 01/08/2021 11:04
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  01/08/2021
+ *      #define FAST_PWM_FAN_FREQUENCY 76 (76Hz)
+ *      #define HYBRID_THRESHOLD
+ *         #define X_HYBRID_THRESHOLD     130  // [mm/s]    
+ * 
+ * V77h 01/07/2021 16:27
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  01/06/2021
+ *        #define LCD_TIMEOUT_TO_STATUS 1200000    // 20 mins
+ * 
+ * 
+ *      FAN_MIN_PWM 30 | FAN_MAX_PWM 128
+ *        VER 77.a Tried 29412 (29.412Khz) w/ OCR2A ** works but Part Fan not fully controllable full sweep 0 - 100 ( eg: runs about 50% at 25% ) **
+ *        VER 77.b Disabled OCR2A -- ?? no difference.. 
+ *        VER 77.c Tied 1220 (1.22KHz) - slightly better - less noise - not fully controllable.. still in the 1 -10 with a max of maybe 15-20 range
+ *        VER 77.d ** 488 (488Hz)  - slowed part fan down.. 100% seems slower, we have noticable 25% - feels to sluggish and not full power.
+ * 
+ *      FAN_MIN_PWM 0 | FAN_MAX_PWM 255
+ *        VER 77.e ** 305 (305Hz)  - PF normal - same results on cont fan and case light pwm
+ * 
+ *      FAN_MIN_PWM 0 | FAN_MAX_PWM 64
+ *        VER 77.f ** 31400 (31.4KHz)  - same w/ CF and CL - PF limited range - not good on 25%
+ * 
+ *      FAN_MIN_PWM 192 | FAN_MAX_PWM 255
+ *        VER 77.g ** 31400 (31.4KHz)  - same CF CL - PF only full range.
+ * 
+ *      FAN_MIN_PWM 0 | FAN_MAX_PWM 255
+ *        VER 77.h ** 30 (30Hz)  -
  * 
  * V76 01/05/2021 15:19
  *      UPDATES: MARLIN upstream bugfix-2.0.x  01/05/2021

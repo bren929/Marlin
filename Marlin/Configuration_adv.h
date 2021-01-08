@@ -479,8 +479,8 @@
   //#define CONTROLLER_FAN_USE_Z_ONLY       // With this option only the Z axis is considered
   //#define CONTROLLER_FAN_IGNORE_Z         // Ignore Z stepper. Useful when stepper timeout is disabled.
   #define CONTROLLERFAN_SPEED_MIN         0 // (0-255) Minimum speed. (If set below this value the fan is turned off.)
-  #define CONTROLLERFAN_SPEED_ACTIVE    192 // (0-255) Active speed, used when any motor is enabled
-  #define CONTROLLERFAN_SPEED_IDLE      112 // (0-255) Idle speed, used when motors are disabled
+  #define CONTROLLERFAN_SPEED_ACTIVE    102 // (0-255) Active speed, used when any motor is enabled
+  #define CONTROLLERFAN_SPEED_IDLE       64 // (0-255) Idle speed, used when motors are disabled
   #define CONTROLLERFAN_IDLE_TIME        30 // (seconds) Extra time to keep the fan running after disabling motors
   #define CONTROLLER_FAN_EDITABLE           // Enable M710 configurable settings
   #if ENABLED(CONTROLLER_FAN_EDITABLE)
@@ -522,6 +522,7 @@
 //#define FAN_MIN_PWM 50
 //#define FAN_MAX_PWM 128
 
+
 /**
  * FAST PWM FAN Settings
  *
@@ -544,11 +545,16 @@
  *   PWM on pin OC2A. Only use this option if you don't need PWM on 0C2A. (Check your schematic.)
  *   USE_OCR2A_AS_TOP sacrifices duty cycle control resolution to achieve this broader range of frequencies.
  */
-
+// 120 Mhz = 120000Hz; 120*1000/ 510 = 235.2941176470588Hz; 235.2941176470588 / 8 = ; 29.41176470588235
 #if ENABLED(FAST_PWM_FAN)
-  #define FAST_PWM_FAN_FREQUENCY 2.44
- // #define FAST_PWM_FAN_FREQUENCY 39200
-//  #define USE_OCR2A_AS_TOP
+//  #define FAST_PWM_FAN_FREQUENCY 31400
+//  #define FAST_PWM_FAN_FREQUENCY 29412    // 77.a works - part fan runs but cant be lowered down low ( eg: 25% seems to be like 50% )
+//  #define FAST_PWM_FAN_FREQUENCY  1220    //  77.c ( 1.22Khz ) less noise - not fully controllable.. still in the 1 -10 with a max of maybe 15-20 range
+//  #define FAST_PWM_FAN_FREQUENCY  488     // 77.d 488Hz -- 100% seems slower, we have noticable 25% - feels to sluggish and not full power.
+//  #define FAST_PWM_FAN_FREQUENCY  488     // 77.e 488Hz -- PF normal - same results on cont fan and case light pwm
+  #define FAST_PWM_FAN_FREQUENCY 76
+
+//  #define USE_OCR2A_AS_TOP                // 77.b - disabled OCR2A
 #endif
 
 
@@ -1488,11 +1494,12 @@
 
 #if HAS_DISPLAY
   // The timeout (in ms) to return to the status screen from sub-menus
-  //#define LCD_TIMEOUT_TO_STATUS 15000
+//  #define LCD_TIMEOUT_TO_STATUS 15000
+  #define LCD_TIMEOUT_TO_STATUS 1200000    // 20 mins
 
   #if ENABLED(SHOW_BOOTSCREEN)
  //   #define BOOTSCREEN_TIMEOUT 4000      // (ms) Total Duration to display the boot screen(s)
-    #define BOOTSCREEN_TIMEOUT 1000      // (ms) Total Duration to display the boot screen(s)
+    #define BOOTSCREEN_TIMEOUT 2000      // (ms) Total Duration to display the boot screen(s)
     #if EITHER(HAS_MARLINUI_U8GLIB, TFT_COLOR_UI)
       #define BOOT_MARLIN_LOGO_SMALL     // Show a smaller Marlin logo on the Boot Screen (saving lots of flash)
     #endif
@@ -1512,7 +1519,7 @@
 #endif
 
 #if EITHER(SDSUPPORT, LCD_SET_PROGRESS_MANUALLY) && ANY(HAS_MARLINUI_U8GLIB, HAS_MARLINUI_HD44780, IS_TFTGLCD_PANEL, EXTENSIBLE_UI)
-  //#define SHOW_REMAINING_TIME       // Display estimated time to completion
+  #define SHOW_REMAINING_TIME       // Display estimated time to completion
   #if ENABLED(SHOW_REMAINING_TIME)
     #define USE_M73_REMAINING_TIME  // Use remaining time from M73 command instead of estimation
     #define ROTATE_PROGRESS_DISPLAY // Display (P)rogress, (E)lapsed, and (R)emaining time
@@ -2172,7 +2179,7 @@
 #define LIN_ADVANCE
 #if ENABLED(LIN_ADVANCE)
   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
-  #define LIN_ADVANCE_K 0.00    // Unit: mm compression per 1mm/s extruder speed
+  #define LIN_ADVANCE_K 0.05    // Unit: mm compression per 1mm/s extruder speed
   //#define LA_DEBUG            // If enabled, this will generate debug information output over USB.
   #define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
 #endif
@@ -2936,7 +2943,7 @@
   #define INTERPOLATE      true
 
   #if AXIS_IS_TMC(X)
-   #define X_CURRENT       580        // (mA) RMS current. Multiply by 1.414 for peak current.
+   #define X_CURRENT       640        // (mA) RMS current. Multiply by 1.414 for peak current.
     #define X_CURRENT_HOME  (X_CURRENT/2)  // (mA) RMS current for sensorless homing
     #define X_MICROSTEPS     256        // 0..256
     #define X_RSENSE          0.11
@@ -2954,7 +2961,7 @@
   #endif
 
   #if AXIS_IS_TMC(Y)
-     #define Y_CURRENT       580
+     #define Y_CURRENT       640
     #define Y_CURRENT_HOME  (Y_CURRENT/2)
     #define Y_MICROSTEPS     256
     #define Y_RSENSE          0.11
@@ -3008,7 +3015,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT      600
+    #define E0_CURRENT      700
     #define E0_MICROSTEPS    256
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
@@ -3016,7 +3023,7 @@
   #endif
 
   #if AXIS_IS_TMC(E1)
-    #define E1_CURRENT      600
+    #define E1_CURRENT      700
     #define E1_MICROSTEPS    256
     #define E1_RSENSE         0.11
     #define E1_CHAIN_POS     -1
@@ -3230,7 +3237,7 @@
    * STEALTHCHOP_(XY|Z|E) must be enabled to use HYBRID_THRESHOLD.
    * M913 X/Y/Z/E to live tune the setting
    */
-  //#define HYBRID_THRESHOLD
+  #define HYBRID_THRESHOLD
 
   #define X_HYBRID_THRESHOLD     130  // [mm/s]
   #define X2_HYBRID_THRESHOLD    130

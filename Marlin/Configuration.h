@@ -876,7 +876,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 130.00, 130.00, 12, 350, 350 }
+#define DEFAULT_MAX_FEEDRATE          { 130.00, 130.00, 16, 350, 350 }
 
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
@@ -890,7 +890,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 700, 700, 100, 5000, 5000 }
+#define DEFAULT_MAX_ACCELERATION      { 700, 700, 75, 5000, 5000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1951,12 +1951,12 @@
 
 
 // Preheat Constants
-#define PREHEAT_1_LABEL       "PLA-PRO"
-#define PREHEAT_1_TEMP_HOTEND 202
-#define PREHEAT_1_TEMP_BED     57
+#define PREHEAT_1_LABEL       "SS-PLA-PRO"
+#define PREHEAT_1_TEMP_HOTEND 200
+#define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_2_LABEL       "ABS"
+#define PREHEAT_2_LABEL       "GD-ABS"
 #define PREHEAT_2_TEMP_HOTEND 245
 #define PREHEAT_2_TEMP_BED    110
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
@@ -1968,18 +1968,18 @@
       #define CUSTOM_USER_MENUS
  */
 
-#define PREHEAT_3_LABEL         "NYLON"
+#define PREHEAT_3_LABEL         "PM-NYLON"
 #define PREHEAT_3_TEMP_HOTEND   260
 #define PREHEAT_3_TEMP_BED      60
 #define PREHEAT_3_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_4_LABEL         "HIPS"
-#define PREHEAT_4_TEMP_HOTEND   255
+#define PREHEAT_4_LABEL         "GD-HIPS"
+#define PREHEAT_4_TEMP_HOTEND   275
 #define PREHEAT_4_TEMP_BED      115
 #define PREHEAT_4_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_5_LABEL         "PC"
-#define PREHEAT_5_TEMP_HOTEND   285
+#define PREHEAT_5_LABEL         "GD-PC"
+#define PREHEAT_5_TEMP_HOTEND   290
 #define PREHEAT_5_TEMP_BED      132
 #define PREHEAT_5_FAN_SPEED     0 // Value from 0 to 255
 
@@ -3041,26 +3041,27 @@
 //#define NUM_M106_FANS 1
 
 // Increase the FAN PWM frequency. Removes the PWM noise but increases heating in the FET/Arduino
-//#define FAST_PWM_FAN
+#define FAST_PWM_FAN
 
 
 // Use software PWM to drive the fan, as for the heaters. This uses a very low frequency
 // which is not as annoying as with the hardware PWM. On the other hand, if this frequency
 // is too low, you should also increment SOFT_PWM_SCALE.
-#define FAN_SOFT_PWM
+//#define FAN_SOFT_PWM
 
 // Incrementing this by 1 will double the software PWM frequency,
 // affecting heaters, and the fan if FAN_SOFT_PWM is enabled.
 // However, control resolution will be halved for each increment;
 // at zero value, there are 128 effective control positions.
 // :[0,1,2,3,4,5,6,7]
-#define SOFT_PWM_SCALE 1
+//#define SOFT_PWM_SCALE 0
 
 // If SOFT_PWM_SCALE is set to a value higher than 0, dithering can
 // be used to mitigate the associated resolution loss. If enabled,
 // some of the PWM cycles are stretched so on average the desired
 // duty cycle is attained.
-#define SOFT_PWM_DITHER
+//#define SOFT_PWM_DITHER
+
 
 
 
