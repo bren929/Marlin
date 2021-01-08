@@ -552,7 +552,7 @@
 //  #define FAST_PWM_FAN_FREQUENCY  1220    //  77.c ( 1.22Khz ) less noise - not fully controllable.. still in the 1 -10 with a max of maybe 15-20 range
 //  #define FAST_PWM_FAN_FREQUENCY  488     // 77.d 488Hz -- 100% seems slower, we have noticable 25% - feels to sluggish and not full power.
 //  #define FAST_PWM_FAN_FREQUENCY  488     // 77.e 488Hz -- PF normal - same results on cont fan and case light pwm
-  #define FAST_PWM_FAN_FREQUENCY 76
+  #define FAST_PWM_FAN_FREQUENCY 30
 
 //  #define USE_OCR2A_AS_TOP                // 77.b - disabled OCR2A
 #endif
@@ -3237,14 +3237,14 @@
    * STEALTHCHOP_(XY|Z|E) must be enabled to use HYBRID_THRESHOLD.
    * M913 X/Y/Z/E to live tune the setting
    */
-  #define HYBRID_THRESHOLD
+  //#define HYBRID_THRESHOLD
 
-  #define X_HYBRID_THRESHOLD     130  // [mm/s]
-  #define X2_HYBRID_THRESHOLD    130
-  #define Y_HYBRID_THRESHOLD     130
-  #define Y2_HYBRID_THRESHOLD    130
-  #define Z_HYBRID_THRESHOLD      10
-  #define Z2_HYBRID_THRESHOLD     10
+  #define X_HYBRID_THRESHOLD     100  // [mm/s]
+  #define X2_HYBRID_THRESHOLD    100
+  #define Y_HYBRID_THRESHOLD     100
+  #define Y2_HYBRID_THRESHOLD    100
+  #define Z_HYBRID_THRESHOLD       3
+  #define Z2_HYBRID_THRESHOLD      3
   #define Z3_HYBRID_THRESHOLD      3
   #define Z4_HYBRID_THRESHOLD      3
   #define E0_HYBRID_THRESHOLD     30
