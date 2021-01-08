@@ -37,7 +37,7 @@
  * 
  * Vvv MM/DD/2021 HH:MM
  * 
- * V78 01/08/2021 11:04
+ * V78 01/08/2021 11:11
  *      UPDATES: MARLIN upstream bugfix-2.0.x  01/08/2021
  *      #define FAST_PWM_FAN_FREQUENCY 76 (76Hz)
  *      #define HYBRID_THRESHOLD
