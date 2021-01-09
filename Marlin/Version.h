@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "79b" 
+#define COMPILE_VERSION "79c" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -37,7 +37,7 @@
  * 
  * Vvv MM/DD/2021 HH:MM
  * 
- * V79b 01/09/2021 10:13
+ * V79c 01/09/2021 10:53
  *      UPDATES: MARLIN upstream bugfix-2.0.x  01/08/2021
  *      #define HOMING_FEEDRATE_MM_M { (75*60), (75*60), (6*60) }     
  *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1282.00, 1282.00, 6460.00, 6220.00, 6220.00 }
@@ -53,6 +53,9 @@
  *      #define TMC_HOME_PHASE { 896, 896, 896 }
  *      #define FAST_PWM_FAN_FREQUENCY  14706  // ( 14.706KHz )
  *      E0 and E-1 ( bed ) PID RE-TUNE
+ * 
+ *      !!! MANUAL_FEEDRATE !!!
+ *      #define MANUAL_FEEDRATE { 70 * 60, 70 * 60, 8 * 60, 2 * 60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
  * 
  * V78 01/08/2021 12:19
  *      UPDATES: MARLIN upstream bugfix-2.0.x  01/08/2021
