@@ -480,7 +480,7 @@
   //#define CONTROLLER_FAN_IGNORE_Z         // Ignore Z stepper. Useful when stepper timeout is disabled.
   #define CONTROLLERFAN_SPEED_MIN         0 // (0-255) Minimum speed. (If set below this value the fan is turned off.)
   #define CONTROLLERFAN_SPEED_ACTIVE    102 // (0-255) Active speed, used when any motor is enabled
-  #define CONTROLLERFAN_SPEED_IDLE       64 // (0-255) Idle speed, used when motors are disabled
+  #define CONTROLLERFAN_SPEED_IDLE       51 // (0-255) Idle speed, used when motors are disabled
   #define CONTROLLERFAN_IDLE_TIME        30 // (seconds) Extra time to keep the fan running after disabling motors
   #define CONTROLLER_FAN_EDITABLE           // Enable M710 configurable settings
   #if ENABLED(CONTROLLER_FAN_EDITABLE)
@@ -545,16 +545,16 @@
  *   PWM on pin OC2A. Only use this option if you don't need PWM on 0C2A. (Check your schematic.)
  *   USE_OCR2A_AS_TOP sacrifices duty cycle control resolution to achieve this broader range of frequencies.
  */
-// 120 Mhz = 120000Hz; 120*1000/ 510 = 235.2941176470588Hz; 235.2941176470588 / 8 = ; 29.41176470588235
+// 120 Mhz = 120000Hz; 120*1000/ 510 = 235.2941176470588Hz; 235.2941176470588 / 8 = ; 29.41176470588235; / 32 = 3.676470588235294
 #if ENABLED(FAST_PWM_FAN)
 //  #define FAST_PWM_FAN_FREQUENCY 31400
 //  #define FAST_PWM_FAN_FREQUENCY 29412    // 77.a works - part fan runs but cant be lowered down low ( eg: 25% seems to be like 50% )
 //  #define FAST_PWM_FAN_FREQUENCY  1220    //  77.c ( 1.22Khz ) less noise - not fully controllable.. still in the 1 -10 with a max of maybe 15-20 range
 //  #define FAST_PWM_FAN_FREQUENCY  488     // 77.d 488Hz -- 100% seems slower, we have noticable 25% - feels to sluggish and not full power.
 //  #define FAST_PWM_FAN_FREQUENCY  488     // 77.e 488Hz -- PF normal - same results on cont fan and case light pwm
-  #define FAST_PWM_FAN_FREQUENCY 30
-
-//  #define USE_OCR2A_AS_TOP                // 77.b - disabled OCR2A
+//  #define FAST_PWM_FAN_FREQUENCY 30
+  #define FAST_PWM_FAN_FREQUENCY  14706  // ( 14.706KHz )
+  #define USE_OCR2A_AS_TOP                // 77.b - disabled OCR2A
 #endif
 
 
@@ -1170,7 +1170,7 @@
 // Backlash Compensation
 // Adds extra movement to axes on direction-changes to account for backlash.
 //
-//#define BACKLASH_COMPENSATION
+#define BACKLASH_COMPENSATION
 #if ENABLED(BACKLASH_COMPENSATION)
   // Define values for backlash distance and correction.
   // If BACKLASH_GCODE is enabled these values are the defaults.
@@ -2979,7 +2979,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT       700
+    #define Z_CURRENT       850
     #define Z_CURRENT_HOME  Z_CURRENT
     #define Z_MICROSTEPS     256
     #define Z_RSENSE          0.11
@@ -2988,7 +2988,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z2)
-    #define Z2_CURRENT      700
+    #define Z2_CURRENT      850
     #define Z2_CURRENT_HOME Z2_CURRENT
     #define Z2_MICROSTEPS    256
     #define Z2_RSENSE         0.11
@@ -3015,7 +3015,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT      700
+    #define E0_CURRENT      720
     #define E0_MICROSTEPS    256
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
@@ -3023,7 +3023,7 @@
   #endif
 
   #if AXIS_IS_TMC(E1)
-    #define E1_CURRENT      700
+    #define E1_CURRENT      720
     #define E1_MICROSTEPS    256
     #define E1_RSENSE         0.11
     #define E1_CHAIN_POS     -1
@@ -3152,7 +3152,7 @@
    */
   #define STEALTHCHOP_XY
   #define STEALTHCHOP_Z
-  //#define STEALTHCHOP_E
+  #define STEALTHCHOP_E
 
   /**
    * Optimize spreadCycle chopper parameters by using predefined parameter sets
@@ -3237,7 +3237,7 @@
    * STEALTHCHOP_(XY|Z|E) must be enabled to use HYBRID_THRESHOLD.
    * M913 X/Y/Z/E to live tune the setting
    */
-  //#define HYBRID_THRESHOLD
+  #define HYBRID_THRESHOLD
 
   #define X_HYBRID_THRESHOLD     100  // [mm/s]
   #define X2_HYBRID_THRESHOLD    100
@@ -3255,7 +3255,6 @@
   #define E5_HYBRID_THRESHOLD     30
   #define E6_HYBRID_THRESHOLD     30
   #define E7_HYBRID_THRESHOLD     30
-
 
 
 
@@ -3346,7 +3345,7 @@
    * Values from 0..1023, -1 to disable homing phase for that axis.
    */
  // #define TMC_HOME_PHASE { 896, 896, 896 }
-
+  #define TMC_HOME_PHASE { 896, 896, 896 }
 
 
   /**

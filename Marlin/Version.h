@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "78" 
+#define COMPILE_VERSION "79" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -37,8 +37,26 @@
  * 
  * Vvv MM/DD/2021 HH:MM
  * 
- * V78 01/08/2021 12:19
+ * V79 01/09/2021 10:04
  *      UPDATES: MARLIN upstream bugfix-2.0.x  01/08/2021
+ *      #define HOMING_FEEDRATE_MM_M { (75*60), (75*60), (6*60) }     
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT  { 1282.00, 1282.00, 6460.00, 6220.00, 6220.00 }
+ *      #define DEFAULT_MAX_FEEDRATE          { 150.00, 135.00, 12, 500, 500 }
+ *      #define DEFAULT_MAX_ACCELERATION      { 700, 700, 50, 5000, 5000 }
+ *      M710 S102 I51 A1 D30 ; (40% 20%)
+ *      #define Z_CURRENT        850
+ *      #define Z2_CURRENT       850
+ *      #define E0_CURRENT      720
+ *      #define E1_CURRENT      720
+ *      #define BACKLASH_COMPENSATION
+ *      #define HYBRID_THRESHOLD
+ *      #define TMC_HOME_PHASE { 896, 896, 896 }
+ *      #define FAST_PWM_FAN_FREQUENCY  14706  // ( 14.706KHz )
+ *      #define USE_OCR2A_AS_TOP       
+ *      E0 and E-1 ( bed ) PID RE-TUNE
+ * 
+ * V78 01/08/2021 12:19
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  0s1/08/2021
  * 
  * V77h 01/07/2021 16:27
  *      UPDATES: MARLIN upstream bugfix-2.0.x  01/06/2021
@@ -62,6 +80,9 @@
  * 
  *      FAN_MIN_PWM 0 | FAN_MAX_PWM 255
  *        VER 77.h ** 30 (30Hz)  -
+ * 
+ * 
+ * 
  * 
  * V76 01/05/2021 15:19
  *      UPDATES: MARLIN upstream bugfix-2.0.x  01/05/2021

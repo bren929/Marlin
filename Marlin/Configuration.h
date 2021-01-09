@@ -555,9 +555,9 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  16.33,  32.83 }
-    #define DEFAULT_Ki_LIST {   1.28,   2.83 }
-    #define DEFAULT_Kd_LIST {  52.26,  95.09 }
+    #define DEFAULT_Kp_LIST {  20.70,  32.83 }
+    #define DEFAULT_Ki_LIST {   1.71,   2.83 }
+    #define DEFAULT_Kd_LIST {  62.57,  95.09 }
   #else
 
 	#define DEFAULT_Kp 22.76
@@ -618,11 +618,13 @@
   // Stock Creality Ender 3 pro Heated Bed
   // 11/13/2020 @ 135 C (PS voltage 25.25)
   // M304 P101.30 I19.22 D355.92
+  // 01/09/2021 @ 90 C
+  // 
   //////////////////////////////////////////
 
-#define DEFAULT_bedKp 101.30
-#define DEFAULT_bedKi 19.22
-#define DEFAULT_bedKd 355.92
+#define DEFAULT_bedKp 104.80
+#define DEFAULT_bedKi 20.47
+#define DEFAULT_bedKd 357.71
 
 #endif // PIDTEMPBED
 
@@ -869,14 +871,14 @@
 
 // E0/E1 = BMG direct drive steppers ( pancake )  ( 400.0 normal steps )
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 400.00, 399.00, 399.00 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1282.00, 1282.00, 6460.00, 6230.00, 6230.00 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT  { 1282.00, 1282.00, 6460.00, 6220.00, 6220.00 }
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 130.00, 130.00, 16, 350, 350 }
+#define DEFAULT_MAX_FEEDRATE          { 150.00, 135.00, 12, 500, 500 }
 
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
@@ -890,7 +892,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 700, 700, 75, 5000, 5000 }
+#define DEFAULT_MAX_ACCELERATION      { 700, 700, 50, 5000, 5000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1771,7 +1773,7 @@
 
 // Homing speeds (mm/min)
 //#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
-#define HOMING_FEEDRATE_MM_M { (75*60), (75*60), (7*60) }
+#define HOMING_FEEDRATE_MM_M { (75*60), (75*60), (6*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
@@ -1952,8 +1954,8 @@
 
 // Preheat Constants
 #define PREHEAT_1_LABEL       "SS-PLA-PRO"
-#define PREHEAT_1_TEMP_HOTEND 200
-#define PREHEAT_1_TEMP_BED     60
+#define PREHEAT_1_TEMP_HOTEND 197
+#define PREHEAT_1_TEMP_BED     59
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "GD-ABS"
