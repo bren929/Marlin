@@ -554,7 +554,7 @@
 //  #define FAST_PWM_FAN_FREQUENCY  488     // 77.e 488Hz -- PF normal - same results on cont fan and case light pwm
 //  #define FAST_PWM_FAN_FREQUENCY 30
   #define FAST_PWM_FAN_FREQUENCY  14706  // ( 14.706KHz )
-  #define USE_OCR2A_AS_TOP                // 77.b - disabled OCR2A
+  //#define USE_OCR2A_AS_TOP                // 77.b - disabled OCR2A
 #endif
 
 
