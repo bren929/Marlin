@@ -37,8 +37,17 @@
  * 
  * Vvv MM/DD/2021 HH:MM
  * 
- * V80 01/xx/2021 hh:mm
- *      UPDATES: MARLIN upstream bugfix-2.0.x  01/14/2021
+ * V80 01/16/2021 01:29
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  01/16/2021
+ *      #define TMC_HOME_PHASE { 128, 128, 128 }
+ *      REMOVED: SQUARE_WAVE_STEPPING
+ *      M92 X1282.00 Y1283.00 Z6450.00
+ *      M203 X150.00 Y150.00 Z8.00
+ *      M201 X800.00 Y800.00 Z50.00
+ *      M204 P550.00 R550.00 T700.00
+ *      M906 X706 ( ALL )
+ *      M900 T0 K0.02
+ *      
  * 
  * V79c 01/09/2021 10:53
  *      UPDATES: MARLIN upstream bugfix-2.0.x  01/08/2021
