@@ -545,16 +545,29 @@
  *   PWM on pin OC2A. Only use this option if you don't need PWM on 0C2A. (Check your schematic.)
  *   USE_OCR2A_AS_TOP sacrifices duty cycle control resolution to achieve this broader range of frequencies.
  */
-// 120 Mhz = 120000Hz; 120*1000/ 510 = 235.2941176470588Hz; 235.2941176470588 / 8 = ; 29.41176470588235; / 32 = 3.676470588235294
+
+/*********************************************************
+ * BTT SKR PRO 1.1 / 1.2
+ * ***********************
+ * 168 Mhz = 168000 Hz;
+ * 168 * 1000 / (2*255*1 [=510] ) = 329.4117647058824 KHz 
+ * /1   = 329.4117647058824 Khz   ( 329412 Khz )
+ * /2   = 164.7058823529412 Khz   (  16471 KHz )
+ * /4   = 82.35294117647059 Khz   (  82353 KHz )
+ * /8   = 41.17647058823529 Khz   (  41176 KHz )
+ * /16  = 20.58823529411765 Khz   (  20588 KHz )
+ * /32  = 10.29411764705882 Khz   (  10294 KHz )
+ * /64  = 5.147058823529412 Khz   (  5147  KHz )
+ * /128 = 2.573529411764706 Khz   (  2574  KHz )
+ * /256 = 1.286764705882353 Khz   (  1287  KHz )
+ * /512 = 0.643382352941176 Khz   (   643   Hz )
+ * 
+ ********************************************************/
+
 #if ENABLED(FAST_PWM_FAN)
-//  #define FAST_PWM_FAN_FREQUENCY 31400
-//  #define FAST_PWM_FAN_FREQUENCY 29412    // 77.a works - part fan runs but cant be lowered down low ( eg: 25% seems to be like 50% )
-//  #define FAST_PWM_FAN_FREQUENCY  1220    //  77.c ( 1.22Khz ) less noise - not fully controllable.. still in the 1 -10 with a max of maybe 15-20 range
-//  #define FAST_PWM_FAN_FREQUENCY  488     // 77.d 488Hz -- 100% seems slower, we have noticable 25% - feels to sluggish and not full power.
-//  #define FAST_PWM_FAN_FREQUENCY  488     // 77.e 488Hz -- PF normal - same results on cont fan and case light pwm
-//  #define FAST_PWM_FAN_FREQUENCY 30
-  #define FAST_PWM_FAN_FREQUENCY  977  // ( 14.706KHz )
-  //#define USE_OCR2A_AS_TOP                // 77.b - disabled OCR2A
+  #define FAST_PWM_FAN_FREQUENCY  1287  // 977 worked OK
+//  #define FAST_PWM_FAN_FREQUENCY  31400
+//  #define USE_OCR2A_AS_TOP
 #endif
 
 
@@ -3153,7 +3166,7 @@
    * Use Trinamic's ultra quiet stepping mode.
    * When disabled, Marlin will use spreadCycle stepping mode.
    */
-  #define STEALTHCHOP_XY
+  //#define STEALTHCHOP_XY
   #define STEALTHCHOP_Z
   #define STEALTHCHOP_E
 

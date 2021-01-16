@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "80(3)" 
+#define COMPILE_VERSION "81" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -35,7 +35,15 @@
 
 /*******************************************************************************************************
  * 
- * Vvv MM/DD/2021 HH:MM
+ * Vxx MM/DD/2021 HH:MM
+ * 
+ * 
+ * V81 01/16/2021 09:08
+ * 
+ *      #define FAST_PWM_FAN_FREQUENCY  1287
+ *      DISABLED: #define STEALTHCHOP_XY
+ *      #define Y_BED_SIZE 223
+ *      #define Z_MAX_POS 220
  * 
  * V80(3) 01/16/2021 05:39
  *      #define FAST_PWM_FAN_FREQUENCY  977  
