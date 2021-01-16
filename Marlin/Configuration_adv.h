@@ -553,7 +553,7 @@
 //  #define FAST_PWM_FAN_FREQUENCY  488     // 77.d 488Hz -- 100% seems slower, we have noticable 25% - feels to sluggish and not full power.
 //  #define FAST_PWM_FAN_FREQUENCY  488     // 77.e 488Hz -- PF normal - same results on cont fan and case light pwm
 //  #define FAST_PWM_FAN_FREQUENCY 30
-  #define FAST_PWM_FAN_FREQUENCY  14706  // ( 14.706KHz )
+  #define FAST_PWM_FAN_FREQUENCY  977  // ( 14.706KHz )
   //#define USE_OCR2A_AS_TOP                // 77.b - disabled OCR2A
 #endif
 
@@ -3240,24 +3240,24 @@
    * STEALTHCHOP_(XY|Z|E) must be enabled to use HYBRID_THRESHOLD.
    * M913 X/Y/Z/E to live tune the setting
    */
- // #define HYBRID_THRESHOLD
+  //#define HYBRID_THRESHOLD
 
-  #define X_HYBRID_THRESHOLD     121  // [mm/s]
-  #define X2_HYBRID_THRESHOLD    100
-  #define Y_HYBRID_THRESHOLD     121
-  #define Y2_HYBRID_THRESHOLD    100
-  #define Z_HYBRID_THRESHOLD      12
-  #define Z2_HYBRID_THRESHOLD     12
-  #define Z3_HYBRID_THRESHOLD      3
-  #define Z4_HYBRID_THRESHOLD      3
-  #define E0_HYBRID_THRESHOLD     30
-  #define E1_HYBRID_THRESHOLD     30
-  #define E2_HYBRID_THRESHOLD     30
-  #define E3_HYBRID_THRESHOLD     30
-  #define E4_HYBRID_THRESHOLD     30
-  #define E5_HYBRID_THRESHOLD     30
-  #define E6_HYBRID_THRESHOLD     30
-  #define E7_HYBRID_THRESHOLD     30
+  #define X_HYBRID_THRESHOLD     150  // [mm/s]
+  #define X2_HYBRID_THRESHOLD    150
+  #define Y_HYBRID_THRESHOLD     150
+  #define Y2_HYBRID_THRESHOLD    150
+  #define Z_HYBRID_THRESHOLD      15
+  #define Z2_HYBRID_THRESHOLD     15
+  #define Z3_HYBRID_THRESHOLD     15
+  #define Z4_HYBRID_THRESHOLD     15
+  #define E0_HYBRID_THRESHOLD     45
+  #define E1_HYBRID_THRESHOLD     45
+  #define E2_HYBRID_THRESHOLD     45
+  #define E3_HYBRID_THRESHOLD     45
+  #define E4_HYBRID_THRESHOLD     45
+  #define E5_HYBRID_THRESHOLD     45
+  #define E6_HYBRID_THRESHOLD     45
+  #define E7_HYBRID_THRESHOLD     45
 
 
 
@@ -3347,8 +3347,8 @@
    *
    * Values from 0..1023, -1 to disable homing phase for that axis.
    */
- // #define TMC_HOME_PHASE { 896, 896, 896 }
-//  #define TMC_HOME_PHASE { 128, 128, 128 }
+ // #define TMC_HOME_PHASE { 896, 640, 896 }
+   #define TMC_HOME_PHASE { 896, 896, 896 }
 
 
   /**

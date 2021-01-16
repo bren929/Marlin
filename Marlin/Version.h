@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "80" 
+#define COMPILE_VERSION "80(3)" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -37,7 +37,15 @@
  * 
  * Vvv MM/DD/2021 HH:MM
  * 
- * V80 01/16/2021 02:12
+ * V80(3) 01/16/2021 05:39
+ *      #define FAST_PWM_FAN_FREQUENCY  977  
+ *      #define FAN_MIN_PWM 0
+ *      #define FAN_MAX_PWM 128
+ *      #define TMC_HOME_PHASE { 896, 896, 896 }
+ *      
+ * 
+ * V80(2) 01/16/2021 04:55
+ * V80    01/16/2021 02:12
  *      UPDATES: MARLIN upstream bugfix-2.0.x  01/16/2021
  *      REMOVED: TMC_HOME_PHASE
  *      REMOVED: #define HYBRID_THRESHOLD

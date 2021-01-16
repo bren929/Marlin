@@ -878,7 +878,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 130.00, 150.00, 8, 500, 500 }
+#define DEFAULT_MAX_FEEDRATE          { 150.00, 150.00, 8, 500, 500 }
 
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
@@ -892,7 +892,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 800, 800, 50, 5000, 5000 }
+#define DEFAULT_MAX_ACCELERATION      { 550, 550, 50, 5000, 5000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1792,7 +1792,7 @@
 
 // Homing speeds (mm/min)
 //#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
-#define HOMING_FEEDRATE_MM_M { (75*60), (75*60), (6*60) }
+#define HOMING_FEEDRATE_MM_M { (70*60), (70*60), (5*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
@@ -1974,7 +1974,7 @@
 // Preheat Constants
 #define PREHEAT_1_LABEL       "SS-PLA-PRO"
 #define PREHEAT_1_TEMP_HOTEND 205
-#define PREHEAT_1_TEMP_BED     55
+#define PREHEAT_1_TEMP_BED     50
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "GD-ABS"
