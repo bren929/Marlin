@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "81" 
+#define COMPILE_VERSION "82" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -37,7 +37,24 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  * 
+ * V82 01/17/2021 08:42
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  01/17/2021
  * 
+ *      #define FAST_PWM_FAN_FREQUENCY  643
+ *      #define FAN_MIN_PWM 0
+ *      #define FAN_MAX_PWM 128
+ *  
+ *      #define Y_BED_SIZE 222
+ *      #define Z_AFTER_HOMING  8  
+ *      #define Z_HOMING_HEIGHT  5 
+ *      #define E0_CURRENT      884
+ *      M203 X150.00 Y150.00 Z12.00
+ *          M203 T0 E200.00
+ *      M201 X600.00 Y600.00 Z40.00
+ *      M204 P600.00 R600.00 T675.00
+ *      #define LIN_ADVANCE_K 0.02
+ *      
+ *      
  * V81 01/16/2021 09:08
  * 
  *      #define FAST_PWM_FAN_FREQUENCY  1287
