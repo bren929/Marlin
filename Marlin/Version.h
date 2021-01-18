@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "82" 
+#define COMPILE_VERSION "83" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,7 +36,28 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+ *      
+ * V83 01/17/2021 16:00
+ *          
+ *      #define BLOCK_BUFFER_SIZE 32
+ *      #define TX_BUFFER_SIZE 32
+ *      #define BUFSIZE 32
+ *      #define RX_BUFFER_SIZE 64
+ *      #define NO_TIMEOUTS 1000 
+
+ *      #define ADVANCED_OK
+ *      #define BAUD_RATE_GCODE
+ *      #define FAN_MAX_PWM 192
  * 
+ *      #define DEFAULT_Kp 21.14
+ *      #define DEFAULT_Ki 1.75
+ *      #define DEFAULT_Kd 63.94       
+ * 
+ *      #define DEFAULT_bedKp 113.96
+ *      #define DEFAULT_bedKi 21.12
+ *      #define DEFAULT_bedKd 409.89
+ *      
+ *      
  * V82 01/17/2021 08:42
  *      UPDATES: MARLIN upstream bugfix-2.0.x  01/17/2021
  * 

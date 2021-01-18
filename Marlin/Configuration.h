@@ -549,15 +549,18 @@
     //
     // E3D Chimera Head ( E0 - 40W, E1 30W )
     // E0 - 40w  11/15/2020 PS 25.25VDC
-    //  M301 E0 P16.33 I1.28 D52.26  
+    //  M301 E0 P16.33 I1.28 D52.26
+    //  
+    // E0 - 40w  01/17/2021 PS 25.25VDC  FAST_PWM_FAN_FREQUENCY  643
+    //  M301 E0 P21.14 I1.75 D63.94
     //////////////////////////////////////////
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  20.70,  32.83 }
-    #define DEFAULT_Ki_LIST {   1.71,   2.83 }
-    #define DEFAULT_Kd_LIST {  62.57,  95.09 }
+    #define DEFAULT_Kp_LIST {  21.14,  32.83 }
+    #define DEFAULT_Ki_LIST {   1.75,   2.83 }
+    #define DEFAULT_Kd_LIST {  63.94,  95.09 }
   #else
 
 	#define DEFAULT_Kp 22.76
@@ -622,9 +625,9 @@
   // 
   //////////////////////////////////////////
 
-#define DEFAULT_bedKp 104.80
-#define DEFAULT_bedKi 20.47
-#define DEFAULT_bedKd 357.71
+#define DEFAULT_bedKp 113.96
+#define DEFAULT_bedKi 21.12
+#define DEFAULT_bedKd 409.89
 
 #endif // PIDTEMPBED
 
