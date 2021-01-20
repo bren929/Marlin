@@ -3173,7 +3173,8 @@
 
 
 //#define NEO_PIN             PC9       // PWM for neo-pixel lights in chamber (12/7/2020 blown)
-#define NEO_PIN             PF8     // PWM for neo-pixel lights in chamber
+//#define NEO_PIN             PF8     // PWM for neo-pixel lights in chamber
+#define NEO_PIN             PC1     // PWM for neo-pixel lights in chamber
 
 // Support for Adafruit NeoPixel LED driver
 #define NEOPIXEL_LED
@@ -3182,7 +3183,7 @@
   #define NEOPIXEL_PIN     NEO_PIN     // LED driving pin ( PWM pin on Extension-1 header - Top left corner next to ground )
   //#define NEOPIXEL2_TYPE NEOPIXEL_TYPE
   //#define NEOPIXEL2_PIN    5
-  #define NEOPIXEL_PIXELS     135     // Number of LEDs in the strip. (Longest strip when NEOPIXEL2_SEPARATE is disabled.)
+  #define NEOPIXEL_PIXELS     130     // Number of LEDs in the strip. (Longest strip when NEOPIXEL2_SEPARATE is disabled.)
   //#define NEOPIXEL_IS_SEQUENTIAL    // Sequential display for temperature change - LED by LED. Disable to change all LEDs at once.
   #define NEOPIXEL_BRIGHTNESS 128     // Initial brightness (0-255)
   #define NEOPIXEL_STARTUP_TEST       // Cycle through colors at startup
