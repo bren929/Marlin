@@ -54,8 +54,6 @@ namespace Anycubic {
   float            ChironTFT::live_Zoffset;
   file_menu_t      ChironTFT::file_menu;
 
-  ChironTFT Chiron;
-
   ChironTFT::ChironTFT(){}
 
   void ChironTFT::Startup() {
@@ -576,11 +574,10 @@ namespace Anycubic {
       } break;
 
       case 15:   // A15 Resuming from outage
-        if (printer_state == AC_printer_resuming_from_power_outage) {
+        if (printer_state == AC_printer_resuming_from_power_outage)
           // Need to home here to restore the Z position
-          injectCommands(AC_cmnd_power_loss_recovery);
-          injectCommands("M1000");  // home and start recovery
-        }
+          injectCommands_P(AC_cmnd_power_loss_recovery);
+          injectCommands_P(PSTR("M1000"));  // home and start recovery
         break;
 
       case 16: { // A16 Set HotEnd temp  A17 S170

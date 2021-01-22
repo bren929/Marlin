@@ -23,6 +23,8 @@
 
 #if HAS_TFT_LVGL_UI
 
+#include "../../../../MarlinCore.h"
+
 #include "draw_ui.h"
 #include "tft_multi_language.h"
 

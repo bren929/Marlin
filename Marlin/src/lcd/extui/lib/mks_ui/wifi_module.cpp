@@ -39,10 +39,6 @@
 #include "../../../../module/planner.h"
 #include "../../../../module/servo.h"
 #include "../../../../module/probe.h"
-
-#if DISABLED(EMERGENCY_PARSER)
-  #include "../../../../module/motion.h"
-#endif
 #if ENABLED(POWER_LOSS_RECOVERY)
   #include "../../../../feature/powerloss.h"
 #endif
