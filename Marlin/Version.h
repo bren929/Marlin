@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "83" 
+#define COMPILE_VERSION "84(clean)" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -37,6 +37,12 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  *      
+ * V84 01/22/2021 10:45
+ *      ** Clean source files over-layed as of 01/22/2021 
+ *      ** Configured Config, Config_adv, and SKR PRO pins files with Ender 3 pro ( JAM ) settings
+ *      ** Archived Version.h to this point.
+ *      ** PREP: to migrate to SKR PRO V1.2 new motherboard.
+ * 
  * V83 01/17/2021 16:00
  *          
  *      #define BLOCK_BUFFER_SIZE 32

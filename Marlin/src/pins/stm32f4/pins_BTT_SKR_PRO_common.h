@@ -67,8 +67,6 @@
 #define SERVO0_PIN                          PA1   // ** USING FOR CONTROLLER FAN ( PWM ?)
 #define SERVO1_PIN                          PA2   // ** USING FOR CASE LIGHT( PWM ?)
 
-//#define SERVO0_PIN                          PA1
-//#define SERVO1_PIN                          PC9
 
 //
 // Trinamic Stallguard pins
@@ -266,6 +264,7 @@
 #define TEMP_2_PIN                          PF6   // T3 <-> E2
 #define TEMP_BED_PIN                        PF3   // T0 <-> Bed
 
+
 //
 // Heaters / Fans
 //
@@ -277,31 +276,18 @@
 
 #define FAN_PIN                             PC8   // Fan0       PART Cooling Fan
 #define FAN1_PIN                            PE5   // Fan1       EXTRUDER Fan
-//#define FAN2_PIN                          PE6   // Fan2       CHAMBER_AUTO_FAN_PIN (burnt out on board 9/25/2020)
+#define FAN2_PIN                            PE6   // Fan2       CHAMBER_AUTO_FAN_PIN 
 
-
-// Extension-1 Header
-//#define NEO_PIN                             PC9   // 1-2 PWM for neo-pixel lights in chamber - died 11/25/2020 blown buck converter
-// ^^ defined in configuration.h **
 
 #ifndef HEATER_CHAMBER_PIN
   #define HEATER_CHAMBER_PIN                PF9   // Chamber heater on/off pin
 #endif
-
-//#define FAN2_PIN                            PC4     // Fan2       CHAMBER_AUTO_FAN_PIN ( bad 12/16/2020 ?)
-#define FAN2_PIN                              PG11   // Fan2       CHAMBER_AUTO_FAN_PIN ( bad 12/16/2020 ?)
-
-
-// Extension-2 Header
-
 
 
 
 #ifndef E0_AUTO_FAN_PIN
   #define E0_AUTO_FAN_PIN               FAN1_PIN
 #endif
-
-
 
 
 
