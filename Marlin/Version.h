@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "84" 
+#define COMPILE_VERSION "83" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -37,10 +37,6 @@
  * 
  * Vxx MM/DD/2021 HH:MM
  *      
- * V84 01/20/2021 15:30
- *      UPDATES: MARLIN upstream bugfix-2.0.x  01/19/2021
- *      #define NEO_PIN             PC1     // PWM for neo-pixel lights in chamber
-
  * V83 01/17/2021 16:00
  *          
  *      #define BLOCK_BUFFER_SIZE 32
