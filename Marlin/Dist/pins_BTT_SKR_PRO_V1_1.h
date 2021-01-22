@@ -21,39 +21,10 @@
  */
 #pragma once
 
-//
-// Prefix header for all Marlin sources
-//
-
-#include "MarlinConfigPre.h"
-
-#ifndef __MARLIN_DEPS__
-  #include "../HAL/HAL.h"
+#if HOTENDS > 3 || E_STEPPERS > 3
+  #error "BIGTREE SKR Pro V1.1 supports up to 3 hotends / E-steppers."
 #endif
 
-#include "../pins/pins.h"
+#define BOARD_INFO_NAME "BTT SKR Pro V1.1"
 
-#ifndef __MARLIN_DEPS__
-  #include HAL_PATH(../HAL, timers.h)
-  #include HAL_PATH(../HAL, spi_pins.h)
-#endif
-
-#include "Conditionals_post.h"
-
-#ifndef __MARLIN_DEPS__
-
-  #include HAL_PATH(../HAL, inc/Conditionals_post.h)
-
-  #include "../core/types.h"  // Ahead of sanity-checks
-
-  #include "SanityCheck.h"
-  #include HAL_PATH(../HAL, inc/SanityCheck.h)
-
-  // Include all core headers
-  #include "../core/language.h"
-  #include "../core/utility.h"
-  #include "../core/serial.h"
-
-#endif
-
-#include "../core/multi_language.h"
+#include "pins_BTT_SKR_PRO_common.h"
