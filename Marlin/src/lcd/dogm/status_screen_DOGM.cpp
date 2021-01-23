@@ -40,6 +40,10 @@
 
 #include "../../gcode/parser.h" // for units (and volumetric)
 
+// BDM - missing header - did not compile - workaround
+#include "../../MarlinCore.h"
+
+
 #if ENABLED(FILAMENT_LCD_DISPLAY)
   #include "../../feature/filwidth.h"
   #include "../../module/planner.h"
