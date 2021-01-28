@@ -40,9 +40,9 @@
 
 #include "../../gcode/parser.h" // for units (and volumetric)
 
-// BDM - missing header - did not compile - workaround
-#include "../../MarlinCore.h"
-
+#if ENABLED(LCD_SHOW_E_TOTAL)
+  #include "../../MarlinCore.h" // for printingIsActive(), marlin_state and MF_SD_COMPLETE
+#endif
 
 #if ENABLED(FILAMENT_LCD_DISPLAY)
   #include "../../feature/filwidth.h"
