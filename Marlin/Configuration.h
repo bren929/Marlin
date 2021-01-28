@@ -134,7 +134,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-   #define MOTHERBOARD BOARD_BTT_SKR_PRO_V1_2      //  BigTreeTech SKR Pro v1.2 (STM32F407ZG)
+   #define MOTHERBOARD BOARD_BTT_SKR_PRO_V1_1      //  BigTreeTech SKR Pro v1.1 (STM32F407ZG)
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu

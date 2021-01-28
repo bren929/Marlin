@@ -26,7 +26,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "84(f)" 
+#define COMPILE_VERSION "85" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "BDM"                // Who made the changes.
@@ -36,12 +36,17 @@
 /*******************************************************************************************************
  * 
  * Vxx MM/DD/2021 HH:MM
+ * 
+ * V85 01/28/2021 12:10
+  *      UPDATES: MARLIN upstream bugfix-2.0.x  01/28/2021
  *      
  * V84(c) 01/22/2021 17:50
  *      ** Clean source files over-layed as of 01/22/2021 
  *      ** Configured Config, Config_adv, and SKR PRO pins files with Ender 3 pro ( JAM ) settings
  *      ** Archived Version.h to this point.
- *      ** PREP: to migrate to SKR PRO V1.2 new motherboard.
+ * 
+ *      ** PREP: to migrate to SKR GTR 1.0 new motherboard!
+ * 
  *      !! Workaround - compile error #include "../../MarlinCore.h" in status_screen_DOGM.cpp
  *       (c) #define FAST_PWM_FAN_FREQUENCY     1287
  *       (d)  #define NEOPIXEL_PIXELS           134
