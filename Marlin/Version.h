@@ -38,8 +38,13 @@
  * Vxx MM/DD/2021 HH:MM
  * 
  * V85 01/28/2021 12:10
-  *      UPDATES: MARLIN upstream bugfix-2.0.x  01/28/2021
- *      
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  01/28/2021
+ *       ADDED:
+ *          #define MEATPACK                // Support for MeatPack G-code compression (https://github.com/scottmudge/OctoPrint-MeatPack)
+ *      CHANGED:
+ *          #define NEOPIXEL_IS_SEQUENTIAL   
+ * 
+ * 
  * V84(c) 01/22/2021 17:50
  *      ** Clean source files over-layed as of 01/22/2021 
  *      ** Configured Config, Config_adv, and SKR PRO pins files with Ender 3 pro ( JAM ) settings
